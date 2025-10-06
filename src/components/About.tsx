@@ -9,7 +9,7 @@ const stats = [
 ];
 
 const industries = [
-  "Warehouse", "Hospitality", "Manufacturing", "Special Events", "General Labor",
+  "FMCG Products", "IT Services", "Staffing Solutions", "Technology Innovation", "Business Consulting",
 ];
 
 const About = () => {
@@ -60,11 +60,19 @@ const About = () => {
       <div className="container mx-auto px-4">
         {/* About Header */}
         <div className="text-center mb-4">
-          <p className="text-accent font-semibold text-sm uppercase tracking-wider mb-2">About us</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-            The Leading Hospitality <br className="hidden md:block" />
-            Staffing Platform
+          <p className="text-accent font-semibold text-sm uppercase tracking-wider mb-2">About Navarna Bharat</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Focus on innovation, quality, and client satisfaction
           </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
+            Navarna is a dynamic and versatile force committed to excellence in Fast-Moving Consumer Goods (FMCG), cutting-edge Information Technology (IT) services, and comprehensive Staffing Solutions. As your strategic partner, we prioritize innovation, quality, and client satisfaction to meet your diverse business needs effectively.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
+            Explore our agility in the FMCG sector, ensuring swift market presence for your products. Our Information Technology services stand at the forefront of innovation, providing tailored solutions to match your unique business demands. Going beyond conventional approaches, our Staffing Solutions strategically align talent with your organizational goals, ensuring the right people contribute to your success.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            At Navarna, we thrive in dynamic business landscapes, adapting to change and consistently delivering solutions that surpass expectations. Our team of skilled professionals is not only experts in their fields but also dedicated to understanding your specific needs.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
@@ -88,17 +96,16 @@ const About = () => {
           {/* Right - Content */}
           <div>
             <p className="text-lg text-muted-foreground mb-6">
-              This staffing platform provides access to a diverse pool of qualified candidates
-              with specialized skills in areas such as hospitality management.
+              We provide comprehensive solutions across FMCG, IT Services, and Staffing. Our team brings expertise and dedication to help your business thrive in dynamic markets.
             </p>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                <span className="text-foreground">This helps businesses maintain service excellence</span>
+                <span className="text-foreground">Swift market presence for FMCG products with highest industry standards</span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                <span className="text-foreground">This scalability allows businesses to adjust staffing</span>
+                <span className="text-foreground">Tailored staffing solutions aligning talent with organizational goals</span>
               </li>
             </ul>
 

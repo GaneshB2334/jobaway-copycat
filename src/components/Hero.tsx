@@ -43,13 +43,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Find Your Next Career Here
+            Excellence in FMCG, IT Services
             <br />
-            Our Open Positions
+            & Staffing Solutions
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto">
-            Explore our open positions to find roles that align with your interests and expertise.
-            From entry-level positions to leadership roles.
+            Navarna is a dynamic and versatile force committed to excellence. As your strategic partner, we prioritize innovation, quality, and client satisfaction to meet your diverse business needs effectively.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -57,14 +56,14 @@ const Hero = () => {
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full px-8 text-lg font-semibold"
             >
-              Find Works <ArrowRight className="ml-2 w-5 h-5" />
+              Our Services <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button
               size="lg"
               variant="secondary"
               className="bg-white hover:bg-white/90 text-foreground rounded-full px-8 text-lg font-semibold"
             >
-              Hire Talents Now
+              Contact Us
             </Button>
           </div>
         </div>

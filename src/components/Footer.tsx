@@ -13,10 +13,14 @@ const Footer = () => {
                   <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                 </svg>
               </div>
-              <span className="text-xl font-bold">JobAway</span>
+              <span className="text-xl font-bold">Navarna Bharat</span>
             </Link>
+            <p className="text-white/80 text-sm mb-4">
+              Dynamic and versatile force committed to excellence in FMCG, IT services, and Staffing Solutions.
+            </p>
             <p className="text-white/80 text-sm">
-              The leading hospitality staffing platform connecting businesses with qualified talent.
+              <strong>Email:</strong> info@navarna.com<br/>
+              <strong>Phone:</strong> +91 120 4914498
             </p>
           </div>
 
@@ -47,45 +51,45 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* For Workers */}
+          {/* Our Services */}
           <div>
-            <h3 className="font-bold text-lg mb-4">For Workers</h3>
+            <h3 className="font-bold text-lg mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/find-work" className="text-white/80 hover:text-accent transition-colors">
-                  Find Work
+                <Link to="/fmcg" className="text-white/80 hover:text-accent transition-colors">
+                  FMCG Products
                 </Link>
               </li>
               <li>
-                <Link to="/how-it-works" className="text-white/80 hover:text-accent transition-colors">
-                  How It Works
+                <Link to="/staffing" className="text-white/80 hover:text-accent transition-colors">
+                  Staffing Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/signup" className="text-white/80 hover:text-accent transition-colors">
-                  Sign Up
+                <Link to="/it-services" className="text-white/80 hover:text-accent transition-colors">
+                  IT Services
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* For Business */}
+          {/* Company */}
           <div>
-            <h3 className="font-bold text-lg mb-4">For Business</h3>
+            <h3 className="font-bold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/hire" className="text-white/80 hover:text-accent transition-colors">
-                  Hire Talent
+                <Link to="/about" className="text-white/80 hover:text-accent transition-colors">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link to="/solutions" className="text-white/80 hover:text-accent transition-colors">
-                  Solutions
+                <Link to="/contact" className="text-white/80 hover:text-accent transition-colors">
+                  Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="/pricing" className="text-white/80 hover:text-accent transition-colors">
-                  Pricing
+                <Link to="/careers" className="text-white/80 hover:text-accent transition-colors">
+                  Careers
                 </Link>
               </li>
             </ul>
@@ -93,7 +97,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 pt-8 text-center text-white/80 text-sm">
-          <p>&copy; 2024 JobAway. All rights reserved.</p>
+          <p>&copy; 2024 Navarna Bharat. All rights reserved.</p>
         </div>
       </div>
     </footer>
