@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        badge: {
+          yellow: "hsl(var(--badge-yellow))",
+          pink: "hsl(var(--badge-pink))",
+          cyan: "hsl(var(--badge-cyan))",
+          purple: "hsl(var(--badge-purple))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
