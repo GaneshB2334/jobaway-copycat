@@ -75,9 +75,6 @@ const ITESPage = () => {
                 <p className="text-2xl text-blue-200 mb-8">
                   Innovative IT Solution
                 </p>
-                <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
-                  Get Started <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
               </div>
               <div className="relative">
                 <img 
