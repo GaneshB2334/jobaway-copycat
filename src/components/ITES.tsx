@@ -1,7 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Globe, ShoppingCart, Layers, Settings, Database, CheckCircle, Zap, Shield } from "lucide-react";
+// import Footer from "./Footer";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+
+
+
+
 
 const ITESPage = () => {
   const technologies = [
@@ -51,7 +56,8 @@ const ITESPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-        <Navigation />
+      <Navigation />
+      
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-indigo-950 via-indigo-900 to-blue-900 pt-32 pb-24 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
@@ -135,7 +141,7 @@ const ITESPage = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&h=600&fit=crop" 
+                  src="https://navarna.com/public/assetsfront/img/web.jpg" 
                   alt="Web Design" 
                   className="rounded-2xl shadow-xl"
                 />
@@ -254,7 +260,7 @@ const ITESPage = () => {
               <div className="relative">
                 <div className="bg-gradient-to-br from-indigo-950 to-blue-900 rounded-2xl p-8 shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=600&fit=crop" 
+                    src="https://navarna.com/public/assetsfront/img/ItImg5.jpg" 
                     alt="Website Maintenance" 
                     className="rounded-xl w-full h-auto"
                   />
@@ -380,33 +386,133 @@ const ITESPage = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-72 h-72 bg-purple-500 rounded-full blur-3xl"></div>
+      {/* Our Service */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-6">
+              <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Our Services</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-8">
+                Information Technology and IT Enabled Services ITES
+              </h2>
+            </div>
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed mb-12">
+              <p>
+                In the Information Technology and IT Enabled Services (ITES) domain, Navarna is a leading player offering cutting-edge solutions to meet the diverse and evolving needs of businesses. Our IT-ITES business line is characterized by a commitment to innovation, technological expertise, and a client-centric approach. In the ever-evolving landscape of modern technologies, NAVARNA emerges as a pioneering force committed to delivering cutting-edge IT solutions that propel businesses into the future. Rooted in a steadfast commitment to innovation, our company stands at the forefront of transformative technologies, offering an extensive suite of services meticulously crafted to meet the dynamic needs of the digital era.
+              </p>
+            </div>
+          </div>
         </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Digital Presence?
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Let's collaborate to create innovative solutions tailored to your business needs
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
-                Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button className="bg-white hover:bg-gray-100 text-blue-900 rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
-                Schedule Consultation
-              </Button>
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              {/* Innovative IT Solutions */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
+                <div className="relative h-64">
+                  <img 
+                    src="https://navarna.com/public/img/solution.jpg" 
+                    alt="Innovative IT Solutions" 
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-4 left-4 bg-orange-500 text-white px-4 py-2 rounded-full font-semibold">
+                    Solutions
+                  </span>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Innovative IT Solutions</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    At Navarna, we pride ourselves on being at the forefront of technological innovation. Our IT solutions are designed to address the challenges and opportunities presented by the ever-changing landscape of the digital world. From software development and application design to cloud computing and cybersecurity, we provide a comprehensive suite of services that empower businesses to thrive in the digital era.
+                  </p>
+                </div>
+              </div>
+
+              {/* Tailored IT Services */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
+                <div className="relative h-64">
+                  <img 
+                    src="https://navarna.com/public/img/solution1.jpg" 
+                    alt="Tailored IT Services" 
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-4 left-4 bg-orange-500 text-white px-4 py-2 rounded-full font-semibold">
+                    Services
+                  </span>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Tailored IT Services</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We understand that each business is unique, and one-size-fits-all solutions do not always suffice. Our approach involves understanding the specific needs and goals of our clients, allowing us to tailor our IT services accordingly. Whether you are a startup looking for scalable solutions or an established enterprise seeking digital transformation.
+                  </p>
+                </div>
+              </div>
+
+              {/* Robust IT Infrastructure */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
+                <div className="relative h-64">
+                  <img 
+                    src="https://navarna.com/public/img/solution2.jpeg" 
+                    alt="Robust IT Infrastructure" 
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-4 left-4 bg-orange-500 text-white px-4 py-2 rounded-full font-semibold">
+                    Infrastructure
+                  </span>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Robust IT Infrastructure</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Navarna is dedicated to building and maintaining robust IT infrastructure for businesses. This includes network architecture, data storage, and server management, ensuring a secure and efficient foundation for your digital operations. Our team of IT experts collaborates with clients to create scalable and future-ready infrastructure that can adapt to evolving business requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Security and BPO */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Data Security and Compliance */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
+                <div className="relative h-64">
+                  <img 
+                    src="https://navarna.com/public/img/solution3.jpg" 
+                    alt="Data Security" 
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-4 left-4 bg-orange-500 text-white px-4 py-2 rounded-full font-semibold">
+                    Security
+                  </span>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Data Security and Compliance</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    In an era where data is a critical asset, Navarna places a strong emphasis on data security and compliance. We implement robust cybersecurity measures to safeguard sensitive information and ensure compliance with industry regulations. Our focus on data integrity and privacy gives our clients the confidence that their digital assets are in safe hands.
+                  </p>
+                </div>
+              </div>
+
+              {/* BPO Services */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
+                <div className="relative h-64">
+                  <img 
+                    src="https://navarna.com/public/img/solution4.jpg" 
+                    alt="BPO Services" 
+                    className="w-full h-full object-cover"
+                  />
+                  <span className="absolute top-4 left-4 bg-orange-500 text-white px-4 py-2 rounded-full font-semibold">
+                    BPO
+                  </span>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">ITES - Business Process Outsourcing (BPO)</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Navarna's ITES offerings extend to Business Process Outsourcing (BPO) services. From customer support and data entry to back-office processes, our BPO services are designed to streamline operations, reduce costs, and enhance overall efficiency. We leverage technology to automate repetitive tasks, allowing businesses to focus on their core competencies.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      
       <Footer />
     </div>
   );
