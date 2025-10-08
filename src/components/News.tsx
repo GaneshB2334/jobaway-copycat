@@ -1,4 +1,3 @@
-import { Card } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
 
 const news = [
@@ -21,20 +20,26 @@ const news = [
 
 const News = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
-          <p className="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Media</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16">
+          <p className="font-semibold text-sm uppercase tracking-wider mb-2" style={{ color: '#2d1bb5' }}>Media</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16">
             Latest News
           </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {news.map((article) => (
-            <Card
-              key={article.title}
-              className="overflow-hidden hover:shadow-xl transition-all border-2 hover:border-accent group cursor-pointer"
+          {news.map((article, index) => (
+            <div
+              key={index}
+              className="overflow-hidden bg-white rounded-lg shadow-md hover:shadow-xl transition-all border-2 border-gray-200 group cursor-pointer"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#2d1bb5';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = '#e5e7eb';
+              }}
             >
               <div className="aspect-video overflow-hidden">
                 <img
@@ -44,15 +49,23 @@ const News = () => {
                 />
               </div>
               <div className="p-6">
-                <div className="flex items-center gap-2 text-muted-foreground text-sm mb-3">
+                <div className="flex items-center gap-2 text-gray-500 text-sm mb-3">
                   <Calendar className="w-4 h-4" />
                   <span>{article.date}</span>
                 </div>
-                <h4 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors">
+                <h4 
+                  className="text-xl font-bold text-gray-900 transition-colors"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = '#2d1bb5';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = '#111827';
+                  }}
+                >
                   {article.title}
                 </h4>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
