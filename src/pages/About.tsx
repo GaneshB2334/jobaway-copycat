@@ -273,32 +273,7 @@ const About = () => {
         </div>
       </section>
       <Team />
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Partner With Us?
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Let's discuss how we can help drive your business forward with our comprehensive solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
-                Get Started Today <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button className="bg-white hover:bg-gray-100 text-blue-900 rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
-                Contact Us
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      
         <Footer />
     </div>
   );
