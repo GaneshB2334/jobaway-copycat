@@ -22,24 +22,24 @@ const Contact = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <Card className="p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(45, 27, 181, 0.1)' }}>
+                <Phone className="w-8 h-8" style={{ color: '#2d1bb5' }} />
               </div>
               <h3 className="text-xl font-bold mb-2">Phone</h3>
               <p className="text-muted-foreground">+1 (555) 123-4567</p>
             </Card>
 
             <Card className="p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(45, 27, 181, 0.1)' }}>
+                <Mail className="w-8 h-8" style={{ color: '#2d1bb5' }} />
               </div>
               <h3 className="text-xl font-bold mb-2">Email</h3>
               <p className="text-muted-foreground">hello@jobaway.com</p>
             </Card>
 
             <Card className="p-8 text-center hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(45, 27, 181, 0.1)' }}>
+                <MapPin className="w-8 h-8" style={{ color: '#2d1bb5' }} />
               </div>
               <h3 className="text-xl font-bold mb-2">Office</h3>
               <p className="text-muted-foreground">123 Business St, NY 10001</p>
@@ -81,7 +81,7 @@ const Contact = () => {
                 />
               </div>
 
-              <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button className="w-full text-white" style={{ backgroundColor: '#2d1bb5' }}>
                 Send Message
               </Button>
             </form>

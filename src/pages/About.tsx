@@ -33,15 +33,15 @@ const About = () => {
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                  <Check className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: '#2d1bb5' }} />
                   <span>Connect qualified professionals with meaningful work</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                  <Check className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: '#2d1bb5' }} />
                   <span>Provide flexible staffing solutions for businesses</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                  <Check className="w-5 h-5 mt-1 flex-shrink-0" style={{ color: '#2d1bb5' }} />
                   <span>Build a community of trusted professionals</span>
                 </li>
               </ul>
@@ -50,8 +50,8 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="p-8 text-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(45, 27, 181, 0.1)' }}>
+                <Target className="w-8 h-8" style={{ color: '#2d1bb5' }} />
               </div>
               <h3 className="text-2xl font-bold mb-3">Our Vision</h3>
               <p className="text-muted-foreground">
@@ -60,8 +60,8 @@ const About = () => {
             </Card>
 
             <Card className="p-8 text-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(45, 27, 181, 0.1)' }}>
+                <Users className="w-8 h-8" style={{ color: '#2d1bb5' }} />
               </div>
               <h3 className="text-2xl font-bold mb-3">Our Team</h3>
               <p className="text-muted-foreground">
@@ -70,8 +70,8 @@ const About = () => {
             </Card>
 
             <Card className="p-8 text-center">
-              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: 'rgba(45, 27, 181, 0.1)' }}>
+                <Zap className="w-8 h-8" style={{ color: '#2d1bb5' }} />
               </div>
               <h3 className="text-2xl font-bold mb-3">Our Values</h3>
               <p className="text-muted-foreground">
