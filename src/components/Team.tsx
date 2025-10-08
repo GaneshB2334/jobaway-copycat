@@ -1,11 +1,12 @@
 const team = [
-  { name: "Tom Oliver", role: "Founder", image: "https://i.pravatar.cc/400?img=12" },
-  { name: "Loenard Barnes", role: "Lead Engineer", image: "https://i.pravatar.cc/400?img=13" },
-  { name: "Gilbert Sherman", role: "Sale Manager", image: "https://i.pravatar.cc/400?img=14" },
-  { name: "Franklin Bailey", role: "Art Director", image: "https://i.pravatar.cc/400?img=15" },
-  { name: "Azizi Dai", role: "Assistant Director", image: "https://i.pravatar.cc/400?img=16" },
-  { name: "Ashitaka Dai", role: "Art Director", image: "https://i.pravatar.cc/400?img=17" },
-  { name: "Diarmuid Eoin", role: "Sale Manager", image: "https://i.pravatar.cc/400?img=18" },
+  { name: "Pravin Kumar", role: "Chairman", image: "https://navarna.com/public/assetsfront/img/11.jpg" },
+  { name: "Kamal Chib", role: "Board President", image: "https://navarna.com/public/assetsfront/img/22.jpg" },
+  { name: "Anil Pratham,Ex. DGP Gujrat", role: "Advisor to Board", image: "https://navarna.com/public/assetsfront/img/33.jpg" },
+  { name: "Amresh Kumar Mishra", role: "Managing Director", image: "https://navarna.com/public/assetsfront/img/4.jpg" },
+  { name: "Himanshu Kaushik", role: "Chief Executive Officer(CEO)", image: "https://navarna.com/public/assetsfront/img/5.jpg" },
+  { name: "Amit Kumar", role: "Alliance Director", image: "https://navarna.com/public/assetsfront/img/6.jpg" },
+  { name: "G.R. Pradhan", role: "Alliance Director", image: "https://navarna.com/public/assetsfront/img/7.jpg" },
+  { name: "Ashutosh Mourya", role: "Alliance Director", image: "https://navarna.com/public/assetsfront/img/8.jpg" },
 ];
 
 const Team = () => {
