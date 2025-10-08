@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const floatingProfiles = [
   { name: "Waiter", image: "https://i.pravatar.cc/150?img=1", color: "#fbbf24", position: "top-20 left-[10%]" },
-  { name: "Assistant", image: "https://i.pravatar.cc/150?img=2", color: "#06b6d4", position: "top-40 left-[15%]" },
+  { name: "Assistant", image: "https://i.pravatar.cc/150?img=2", color: "#06b6d4", position: "top-[40%] left-[15%]" },
   { name: "Painter", image: "https://i.pravatar.cc/150?img=3", color: "#a855f7", position: "bottom-40 left-[12%]" },
   { name: "Finance", image: "https://i.pravatar.cc/150?img=4", color: "#fbbf24", position: "top-32 right-[10%]" },
   { name: "Cleaner", image: "https://i.pravatar.cc/150?img=5", color: "#ec4899", position: "top-[45%] right-[8%]" },
@@ -11,7 +11,7 @@ const floatingProfiles = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden pt-32 pb-20" style={{ backgroundColor: '#2d1bb5' }}>
+    <section className="relative min-h-screen overflow-hidden pt-32 pb-20 bg-brand">
       {/* Floating Profile Avatars */}
       {floatingProfiles.map((profile, index) => (
         <div
@@ -53,8 +53,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <button
-              className="bg-white hover:bg-gray-100 rounded-full px-8 py-3 text-lg font-semibold transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center"
-              style={{ color: '#2d1bb5' }}
+              className="bg-white hover:bg-gray-100 rounded-full px-8 py-3 text-lg font-semibold transition-all shadow-lg hover:shadow-xl inline-flex items-center justify-center text-brand"
             >
               Our Services <ArrowRight className="ml-2 w-5 h-5" />
             </button>

@@ -53,6 +53,12 @@ export default {
           cyan: "hsl(var(--badge-cyan))",
           purple: "hsl(var(--badge-purple))",
         },
+        navarna: {
+          DEFAULT: '#fe1400',
+        },
+        brand: {
+          DEFAULT: '#fe1400',
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
