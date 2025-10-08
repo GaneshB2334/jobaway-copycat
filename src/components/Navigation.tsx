@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, Menu, Search, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,24 +19,24 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center flex-1 justify-end gap-8">
             {!searchOpen && (
               <div className="flex items-center gap-6">
-                <button className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
+                <Link to="/" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
                   Home
-                </button>
-                <button className="text-slate-700 hover:text-brand transition-colors font-medium">
-                  About
-                </button>
-                <button className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
-                  Solutions
-                </button>
-                <button className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
-                  Pages
-                </button>
-                <button className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
-                  Blog
-                </button>
-                <button className="text-slate-700 hover:text-brand transition-colors font-medium">
-                  Contact
-                </button>
+                </Link>
+                <Link to="/about" className="text-slate-700 hover:text-brand transition-colors font-medium">
+                  About Us
+                </Link>
+                <Link to="/it-ites" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
+                  IT-ITES
+                </Link>
+                <Link to="/fmcg" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
+                  FMCG
+                </Link>
+                <Link to="/staffing" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
+                  Staffing
+                </Link>
+                <Link to="/careers" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
+                  Careers
+                </Link>
               </div>
             )}
 
@@ -66,9 +67,9 @@ const Navigation = () => {
               </button>
               {!searchOpen && (
                 <>
-                  <a href="/contact" className="inline-flex items-center justify-center bg-brand hover:opacity-90 h-10 rounded-full px-6 text-white transition-all font-medium shadow-sm hover:shadow-md">
+                  <Link to="/contact" className="inline-flex items-center justify-center bg-brand hover:opacity-90 h-10 rounded-full px-6 text-white transition-all font-medium shadow-sm hover:shadow-md">
                     Contact
-                  </a>
+                  </Link>
                 </>
               )}
             </div>
@@ -85,7 +86,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-                <div className="lg:hidden mt-4 pt-4 border-t border-slate-100">
+          <div className="lg:hidden mt-4 pt-4 border-t border-slate-100">
             <div className="flex flex-col gap-4">
               {/* Mobile Search */}
               <div className="relative">
@@ -97,28 +98,28 @@ const Navigation = () => {
                 />
               </div>
 
-                <button className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
-                Home <ChevronDown className="w-4 h-4" />
-              </button>
-                <button className="text-slate-700 hover:text-brand transition-colors font-medium text-left">
-                About
-              </button>
-                <button className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
-                Solutions <ChevronDown className="w-4 h-4" />
-              </button>
-              <button className="flex items-center gap-1 text-slate-700 hover:text-blue-600 transition-colors font-medium">
-                Pages <ChevronDown className="w-4 h-4" />
-              </button>
-              <button className="flex items-center gap-1 text-slate-700 hover:text-blue-600 transition-colors font-medium">
-                Blog <ChevronDown className="w-4 h-4" />
-              </button>
-              <button className="text-slate-700 hover:text-blue-600 transition-colors font-medium text-left">
-                Contact
-              </button>
-                <div className="flex flex-col gap-2 pt-2">
-                <a href="/contact" className="inline-flex items-center justify-center bg-brand hover:opacity-90 h-10 rounded-full px-8 text-white transition-all font-medium shadow-sm hover:shadow-md">
+              <Link to="/" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
+                Home
+              </Link>
+              <Link to="/about" className="text-slate-700 hover:text-brand transition-colors font-medium text-left">
+                About Us
+              </Link>
+              <Link to="/it-ites" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
+                IT-ITES
+              </Link>
+              <Link to="/fmcg" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
+                FMCG
+              </Link>
+              <Link to="/staffing" className="flex items-center gap-1 text-slate-700 hover:text-brand transition-colors font-medium">
+                Staffing
+              </Link>
+              <Link to="/careers" className="text-slate-700 hover:text-brand transition-colors font-medium text-left">
+                Careers
+              </Link>
+              <div className="flex flex-col gap-2 pt-2">
+                <Link to="/contact" className="inline-flex items-center justify-center bg-brand hover:opacity-90 h-10 rounded-full px-8 text-white transition-all font-medium shadow-sm hover:shadow-md">
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
           </div>
