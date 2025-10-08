@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { Card } from "@/components/ui/card";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const talentSteps = [
   {
@@ -42,55 +40,93 @@ const HowItWorks = () => {
   const [activeTab, setActiveTab] = useState("talents");
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
-          <p className="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Process</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12">
+          <p className="font-semibold text-sm uppercase tracking-wider mb-2" style={{ color: '#2d1bb5' }}>Process</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
             How It Works?
           </h2>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-5xl mx-auto">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
-            <TabsTrigger value="talents" className="text-lg">For Talents</TabsTrigger>
-            <TabsTrigger value="business" className="text-lg">For Business</TabsTrigger>
-          </TabsList>
+        <div className="max-w-5xl mx-auto">
+          {/* Tab List */}
+          <div className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 bg-gray-100 p-1.5 rounded-full h-14">
+            <button
+              onClick={() => setActiveTab("talents")}
+              className={`text-base font-semibold rounded-full transition-all ${
+                activeTab === "talents"
+                  ? "bg-white text-gray-900 shadow-md"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              For Talents
+            </button>
+            <button
+              onClick={() => setActiveTab("business")}
+              className={`text-base font-semibold rounded-full transition-all ${
+                activeTab === "business"
+                  ? "bg-white text-gray-900 shadow-md"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              For Business
+            </button>
+          </div>
 
-          <TabsContent value="talents">
+          {/* Tab Content */}
+          {activeTab === "talents" && (
             <div className="grid md:grid-cols-3 gap-8">
               {talentSteps.map((step) => (
-                <Card
+                <div
                   key={step.number}
-                  className="p-8 relative hover:shadow-xl transition-shadow border-2 hover:border-accent"
+                  className="p-8 relative bg-white rounded-lg shadow-md hover:shadow-xl transition-all border-2 border-gray-200"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = '#2d1bb5';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = '#e5e7eb';
+                  }}
                 >
-                  <div className="absolute -top-6 left-8 w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold">
+                  <div 
+                    className="absolute -top-6 left-8 w-12 h-12 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-md"
+                    style={{ backgroundColor: '#2d1bb5' }}
+                  >
                     {step.number}
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4 mt-4">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </Card>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
               ))}
             </div>
-          </TabsContent>
+          )}
 
-          <TabsContent value="business">
+          {activeTab === "business" && (
             <div className="grid md:grid-cols-3 gap-8">
               {businessSteps.map((step) => (
-                <Card
+                <div
                   key={step.number}
-                  className="p-8 relative hover:shadow-xl transition-shadow border-2 hover:border-accent"
+                  className="p-8 relative bg-white rounded-lg shadow-md hover:shadow-xl transition-all border-2 border-gray-200"
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = '#2d1bb5';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = '#e5e7eb';
+                  }}
                 >
-                  <div className="absolute -top-6 left-8 w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold">
+                  <div 
+                    className="absolute -top-6 left-8 w-12 h-12 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-md"
+                    style={{ backgroundColor: '#2d1bb5' }}
+                  >
                     {step.number}
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground mb-4 mt-4">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </Card>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-4">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
               ))}
             </div>
-          </TabsContent>
-        </Tabs>
+          )}
+        </div>
       </div>
     </section>
   );

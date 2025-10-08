@@ -1,6 +1,4 @@
 import { ArrowRight, Award, Shield, TrendingUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
 const features = [
   {
@@ -22,11 +20,11 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
-          <p className="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Why Us</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16">
+          <p className="font-semibold text-sm uppercase tracking-wider mb-2" style={{ color: '#2d1bb5' }}>Why Us</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16">
             Why Choose Us
           </h2>
         </div>
@@ -35,22 +33,47 @@ const WhyChooseUs = () => {
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <Card
+              <div
                 key={feature.title}
-                className="p-8 hover:shadow-xl transition-shadow border-2 hover:border-accent group"
+                className="p-8 bg-white rounded-lg shadow-md hover:shadow-xl transition-all border-2 border-gray-200 group"
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = '#2d1bb5';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = '#e5e7eb';
+                }}
               >
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
-                  <Icon className="w-8 h-8 text-accent group-hover:text-white transition-colors" />
+                <div 
+                  className="w-16 h-16 rounded-full flex items-center justify-center mb-6 transition-colors"
+                  style={{ backgroundColor: 'rgba(45, 27, 181, 0.1)' }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#2d1bb5';
+                    const icon = e.currentTarget.querySelector('svg');
+                    if (icon) icon.style.color = 'white';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(45, 27, 181, 0.1)';
+                    const icon = e.currentTarget.querySelector('svg');
+                    if (icon) icon.style.color = '#2d1bb5';
+                  }}
+                >
+                  <Icon className="w-8 h-8 transition-colors" style={{ color: '#2d1bb5' }} />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">{feature.title}</h3>
-                <p className="text-muted-foreground mb-6">{feature.description}</p>
-                <Button
-                  variant="ghost"
-                  className="text-accent hover:text-accent/80 p-0 h-auto font-semibold"
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 mb-6">{feature.description}</p>
+                <button
+                  className="font-semibold inline-flex items-center transition-colors bg-transparent border-none cursor-pointer p-0"
+                  style={{ color: '#2d1bb5' }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = '0.8';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = '1';
+                  }}
                 >
                   Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </Card>
+                </button>
+              </div>
             );
           })}
         </div>

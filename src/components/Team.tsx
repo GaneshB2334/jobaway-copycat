@@ -1,5 +1,3 @@
-import { Card } from "@/components/ui/card";
-
 const team = [
   { name: "Tom Oliver", role: "Founder", image: "https://i.pravatar.cc/400?img=12" },
   { name: "Loenard Barnes", role: "Lead Engineer", image: "https://i.pravatar.cc/400?img=13" },
@@ -12,20 +10,26 @@ const team = [
 
 const Team = () => {
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-4">
-          <p className="text-accent font-semibold text-sm uppercase tracking-wider mb-2">Our Team</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16">
+          <p className="font-semibold text-sm uppercase tracking-wider mb-2" style={{ color: '#2d1bb5' }}>Our Team</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16">
             Meet The Team
           </h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {team.map((member) => (
-            <Card
-              key={member.name}
-              className="overflow-hidden hover:shadow-xl transition-all border-2 hover:border-accent group cursor-pointer"
+          {team.map((member, index) => (
+            <div
+              key={index}
+              className="overflow-hidden bg-white rounded-lg shadow-md hover:shadow-xl transition-all border-2 border-gray-200 group cursor-pointer"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#2d1bb5';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = '#e5e7eb';
+              }}
             >
               <div className="aspect-square overflow-hidden">
                 <img
@@ -35,10 +39,10 @@ const Team = () => {
                 />
               </div>
               <div className="p-4 text-center">
-                <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
-                <p className="text-muted-foreground text-sm">{member.role}</p>
+                <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
+                <p className="text-gray-600 text-sm">{member.role}</p>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
