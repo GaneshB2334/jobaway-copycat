@@ -1,7 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { 
-  ArrowRight, Users, Award, TrendingUp, Target, CheckCircle, 
-  Briefcase, GraduationCap, UserCheck, Building2, Clock, Shield 
+import {
+  ArrowRight,
+  Users,
+  Award,
+  TrendingUp,
+  Target,
+  CheckCircle,
+  Briefcase,
+  GraduationCap,
+  UserCheck,
+  Building2,
+  Clock,
+  Shield,
 } from "lucide-react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
@@ -12,29 +22,29 @@ import { useRef, ReactNode } from "react";
 // Animation variants
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 60 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const fadeInLeft: Variants = {
   hidden: { opacity: 0, x: -60 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut" }
-  }
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
 };
 
 const fadeInRight: Variants = {
   hidden: { opacity: 0, x: 60 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut" }
-  }
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
 };
 
 const staggerContainer: Variants = {
@@ -43,18 +53,18 @@ const staggerContainer: Variants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.15,
-      delayChildren: 0.1
-    }
-  }
+      delayChildren: 0.1,
+    },
+  },
 };
 
 const scaleIn: Variants = {
   hidden: { opacity: 0, scale: 0.9 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" }
-  }
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 // AnimateOnScroll component
@@ -63,7 +73,10 @@ interface AnimateOnScrollProps {
   variants?: Variants;
 }
 
-const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({ children, variants = fadeInUp }) => {
+const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({
+  children,
+  variants = fadeInUp,
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -113,36 +126,34 @@ const StaffingPage: React.FC = () => {
     label: string;
   }
 
-  
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
-      
+
       {/* Hero Section - Custom Navy & Orange */}
       <section className="relative bg-gradient-to-br from-[#132160] via-[#1a2d7a] to-[#132160] overflow-hidden min-h-[600px]">
         {/* Geometric Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Orange Geometric Shape */}
-          <motion.div 
+          <motion.div
             className="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-bl from-[#e3702e] via-[#f58642] to-[#ff9c5a]"
             style={{ clipPath: "polygon(40% 0, 100% 0, 100% 100%, 20% 100%)" }}
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <div 
+            <div
               className="absolute inset-0 opacity-20"
               style={{
                 backgroundImage: `linear-gradient(rgba(255,255,255,0.2) 2px, transparent 2px),
                                  linear-gradient(90deg, rgba(255,255,255,0.2) 2px, transparent 2px)`,
-                backgroundSize: '50px 50px'
+                backgroundSize: "50px 50px",
               }}
             />
           </motion.div>
 
           {/* White/Gray Geometric Shape */}
-          <motion.div 
+          <motion.div
             className="absolute top-0 right-[25%] w-[35%] h-full bg-gradient-to-br from-white via-gray-50 to-gray-100"
             style={{ clipPath: "polygon(50% 0, 100% 0, 50% 100%, 0% 100%)" }}
             initial={{ x: 50, opacity: 0 }}
@@ -163,7 +174,7 @@ const StaffingPage: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <motion.span 
+              <motion.span
                 className="inline-block bg-white/20 backdrop-blur-sm text-white px-5 py-2 rounded-full text-sm font-semibold mb-6 border border-white/30"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -171,8 +182,8 @@ const StaffingPage: React.FC = () => {
               >
                 Staffing Solutions
               </motion.span>
-              
-              <motion.h1 
+
+              <motion.h1
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -181,14 +192,15 @@ const StaffingPage: React.FC = () => {
                 TAILORED STAFFING{" "}
                 <span className="text-[#e3702e]">SOLUTIONS</span>
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 className="text-xl text-blue-100 mb-8 leading-relaxed"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                Connecting talent with opportunity through innovative workforce solutions
+                Connecting talent with opportunity through innovative workforce
+                solutions
               </motion.p>
 
               <motion.div
@@ -201,7 +213,9 @@ const StaffingPage: React.FC = () => {
                   Home
                 </span>
                 <span className="text-white text-2xl">»</span>
-                <span className="text-white font-medium">Staffing Services</span>
+                <span className="text-white font-medium">
+                  Staffing Services
+                </span>
               </motion.div>
             </motion.div>
 
@@ -212,17 +226,17 @@ const StaffingPage: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <motion.div 
+              <motion.div
                 className="relative w-full max-w-lg"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <img 
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop" 
-                  alt="Staffing Solutions" 
+                <img
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop"
+                  alt="Staffing Solutions"
                   className="rounded-2xl shadow-2xl w-full border-4 border-white/20"
                 />
-                <motion.div 
+                <motion.div
                   className="absolute -bottom-6 -left-6 w-48 h-48 bg-[#e3702e]/30 rounded-2xl -z-10"
                   animate={{ rotate: [0, 2, 0] }}
                   transition={{ duration: 5, repeat: Infinity }}
@@ -233,8 +247,6 @@ const StaffingPage: React.FC = () => {
         </div>
       </section>
 
-      
-      
       {/* What We Do Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -242,30 +254,50 @@ const StaffingPage: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <AnimateOnScroll variants={fadeInLeft}>
                 <div>
-                  <span className="text-[#e3702e] font-semibold text-sm uppercase tracking-wider">What We Do</span>
+                  <span className="text-[#e3702e] font-semibold text-sm uppercase tracking-wider">
+                    What We Do
+                  </span>
                   <h2 className="text-4xl md:text-5xl font-bold text-[#132160] mt-3 mb-6">
                     Tech Based HR & Business Solution Company
                   </h2>
-                  
+
                   <div className="space-y-5 text-gray-700 leading-relaxed text-lg">
                     <p>
-                      Welcome to Navarna Bharat, your premier destination for cutting-edge, technology-enabled human resource, staffing, and managed outsourcing services across diverse industries and sectors, including Manufacturing, Service, Sales & Marketing, IT/ITES, and Back office operations.
+                      Welcome to Navarna Bharat, your premier destination for
+                      cutting-edge, technology-enabled human resource, staffing,
+                      and managed outsourcing services across diverse industries
+                      and sectors, including Manufacturing, Service, Sales &
+                      Marketing, IT/ITES, and Back office operations.
                     </p>
-                    
+
                     <p>
-                      Our commitment to delivering exceptional services is underlined by our innovative use of digital platforms, establishing us as India's fastest-growing employer. At Navarna Bharat, we go beyond traditional staffing solutions. We are catalysts of change, constantly striving to enhance workforce productivity and elevate the standards of employability.
+                      Our commitment to delivering exceptional services is
+                      underlined by our innovative use of digital platforms,
+                      establishing us as India's fastest-growing employer. At
+                      Navarna Bharat, we go beyond traditional staffing
+                      solutions. We are catalysts of change, constantly striving
+                      to enhance workforce productivity and elevate the
+                      standards of employability.
                     </p>
-                    
+
                     <p>
-                      At Navarna, we thrive in dynamic business landscapes, adapting to change and consistently delivering solutions that surpass expectations. Our team of skilled professionals is not only experts in their fields but also dedicated to understanding your specific needs.
+                      At Navarna, we thrive in dynamic business landscapes,
+                      adapting to change and consistently delivering solutions
+                      that surpass expectations. Our team of skilled
+                      professionals is not only experts in their fields but also
+                      dedicated to understanding your specific needs.
                     </p>
-                    
+
                     <p>
-                      Our business strategy is meticulously aligned with our vision for a more productive and skilled workforce. We invest in training and skill development programs, ensuring that individuals are equipped with the expertise needed for evolving industries.
+                      Our business strategy is meticulously aligned with our
+                      vision for a more productive and skilled workforce. We
+                      invest in training and skill development programs,
+                      ensuring that individuals are equipped with the expertise
+                      needed for evolving industries.
                     </p>
                   </div>
 
-                  <motion.div 
+                  <motion.div
                     className="mt-8 space-y-3"
                     variants={staggerContainer}
                     initial="hidden"
@@ -273,14 +305,16 @@ const StaffingPage: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     {features.map((feature, index) => (
-                      <motion.div 
-                        key={index} 
+                      <motion.div
+                        key={index}
                         className="flex items-start gap-3"
                         variants={fadeInUp}
                         whileHover={{ x: 5 }}
                       >
                         <CheckCircle className="w-5 h-5 text-[#e3702e] flex-shrink-0 mt-1" />
-                        <span className="text-gray-700 font-medium">{feature}</span>
+                        <span className="text-gray-700 font-medium">
+                          {feature}
+                        </span>
                       </motion.div>
                     ))}
                   </motion.div>
@@ -288,17 +322,17 @@ const StaffingPage: React.FC = () => {
               </AnimateOnScroll>
 
               <AnimateOnScroll variants={fadeInRight}>
-                <motion.div 
+                <motion.div
                   className="relative"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <img 
-                    src="https://navarna.com/public/assetsfront/img/StaffingImg5.jpg" 
-                    alt="HR Solutions Team" 
+                  <img
+                    src="https://navarna.com/public/assetsfront/img/StaffingImg5.jpg"
+                    alt="HR Solutions Team"
                     className="rounded-2xl shadow-xl w-full border-4 border-[#132160]/10"
                   />
-                  <motion.div 
+                  <motion.div
                     className="absolute -top-4 -right-4 w-full h-full bg-[#e3702e]/20 rounded-2xl -z-10"
                     animate={{ rotate: [0, 2, 0] }}
                     transition={{ duration: 5, repeat: Infinity }}
@@ -316,11 +350,13 @@ const StaffingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <AnimateOnScroll>
               <div className="text-center mb-16">
-                <span className="text-[#e3702e] font-semibold text-sm uppercase tracking-wider">Our Services</span>
+                <span className="text-[#e3702e] font-semibold text-sm uppercase tracking-wider">
+                  Our Services
+                </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-[#132160] mt-3 mb-6">
                   Discover The Staffing Services
                 </h2>
-                <motion.div 
+                <motion.div
                   className="w-24 h-1 bg-[#e3702e] mx-auto"
                   initial={{ width: 0 }}
                   whileInView={{ width: 96 }}
@@ -330,7 +366,7 @@ const StaffingPage: React.FC = () => {
               </div>
             </AnimateOnScroll>
 
-            <motion.div 
+            <motion.div
               className="grid md:grid-cols-3 gap-8"
               variants={staggerContainer}
               initial="hidden"
@@ -338,21 +374,21 @@ const StaffingPage: React.FC = () => {
               viewport={{ once: true }}
             >
               {/* Staffing & Manpower */}
-              <motion.div 
+              <motion.div
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all group border-t-4 border-[#132160]"
                 variants={scaleIn}
                 whileHover={{ y: -8 }}
               >
                 <div className="relative h-64 overflow-hidden">
-                  <motion.img 
-                    src="https://navarna.com/public/assetsfront/img/StaffingImg6.jpg" 
-                    alt="Talent Acquisition" 
+                  <motion.img
+                    src="https://navarna.com/public/assetsfront/img/StaffingImg6.jpg"
+                    alt="Talent Acquisition"
                     className="w-full h-full object-cover"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.5 }}
                   />
                   <div className="absolute top-4 left-4">
-                    <motion.span 
+                    <motion.span
                       className="bg-[#e3702e] text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg"
                       whileHover={{ scale: 1.05 }}
                     >
@@ -362,7 +398,7 @@ const StaffingPage: React.FC = () => {
                 </div>
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <motion.div 
+                    <motion.div
                       className="w-12 h-12 bg-gradient-to-br from-[#132160] to-[#1a2d7a] rounded-xl flex items-center justify-center"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
@@ -374,12 +410,13 @@ const StaffingPage: React.FC = () => {
                     </h3>
                   </div>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Comprehensive staffing solutions and talent acquisition services:
+                    Comprehensive staffing solutions and talent acquisition
+                    services:
                   </p>
                   <ul className="space-y-2 max-h-96 overflow-y-auto pr-2">
                     {staffingServices.map((service, index) => (
-                      <motion.li 
-                        key={index} 
+                      <motion.li
+                        key={index}
                         className="flex items-start gap-2 text-gray-700"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -396,21 +433,21 @@ const StaffingPage: React.FC = () => {
               </motion.div>
 
               {/* Apprenticeship Services */}
-              <motion.div 
+              <motion.div
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all group border-t-4 border-[#e3702e]"
                 variants={scaleIn}
                 whileHover={{ y: -8 }}
               >
                 <div className="relative h-64 overflow-hidden">
-                  <motion.img 
-                    src="https://navarna.com/public/assetsfront/img/StaffingImg4.jpg" 
-                    alt="Apprenticeship Services" 
+                  <motion.img
+                    src="https://navarna.com/public/assetsfront/img/StaffingImg4.jpg"
+                    alt="Apprenticeship Services"
                     className="w-full h-full object-cover"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.5 }}
                   />
                   <div className="absolute top-4 left-4">
-                    <motion.span 
+                    <motion.span
                       className="bg-[#e3702e] text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg"
                       whileHover={{ scale: 1.05 }}
                     >
@@ -420,7 +457,7 @@ const StaffingPage: React.FC = () => {
                 </div>
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <motion.div 
+                    <motion.div
                       className="w-12 h-12 bg-gradient-to-br from-[#e3702e] to-[#f58642] rounded-xl flex items-center justify-center"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
@@ -432,12 +469,13 @@ const StaffingPage: React.FC = () => {
                     </h3>
                   </div>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Comprehensive apprenticeship services facilitating skill development and workforce integration:
+                    Comprehensive apprenticeship services facilitating skill
+                    development and workforce integration:
                   </p>
                   <ul className="space-y-3">
                     {apprenticeshipServices.map((service, index) => (
-                      <motion.li 
-                        key={index} 
+                      <motion.li
+                        key={index}
                         className="flex items-start gap-3"
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -450,31 +488,34 @@ const StaffingPage: React.FC = () => {
                       </motion.li>
                     ))}
                   </ul>
-                  
+
                   <div className="mt-6 bg-gradient-to-br from-[#132160]/5 to-[#e3702e]/5 p-6 rounded-xl border border-[#132160]/10">
                     <p className="text-gray-700 text-sm leading-relaxed">
-                      The company aims to be a key player in providing comprehensive Apprenticeship Services, facilitating skill development, and fostering the integration of apprentices into the workforce.
+                      The company aims to be a key player in providing
+                      comprehensive Apprenticeship Services, facilitating skill
+                      development, and fostering the integration of apprentices
+                      into the workforce.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
               {/* Skill Development */}
-              <motion.div 
+              <motion.div
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all group border-t-4 border-[#132160]"
                 variants={scaleIn}
                 whileHover={{ y: -8 }}
               >
                 <div className="relative h-64 overflow-hidden">
-                  <motion.img 
-                    src="https://navarna.com/public/assetsfront/img/StaffingImg2.jpg" 
-                    alt="Skill Development" 
+                  <motion.img
+                    src="https://navarna.com/public/assetsfront/img/StaffingImg2.jpg"
+                    alt="Skill Development"
                     className="w-full h-full object-cover"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.5 }}
                   />
                   <div className="absolute top-4 left-4">
-                    <motion.span 
+                    <motion.span
                       className="bg-[#e3702e] text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg"
                       whileHover={{ scale: 1.05 }}
                     >
@@ -484,7 +525,7 @@ const StaffingPage: React.FC = () => {
                 </div>
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
-                    <motion.div 
+                    <motion.div
                       className="w-12 h-12 bg-gradient-to-br from-[#132160] to-[#1a2d7a] rounded-xl flex items-center justify-center"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
@@ -496,7 +537,9 @@ const StaffingPage: React.FC = () => {
                     </h3>
                   </div>
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Undertaking skill development initiatives with a focus on enhancing employability and fostering professional growth through comprehensive training programs.
+                    Undertaking skill development initiatives with a focus on
+                    enhancing employability and fostering professional growth
+                    through comprehensive training programs.
                   </p>
                   <div className="bg-gradient-to-br from-[#132160]/5 to-[#e3702e]/5 p-6 rounded-xl border border-[#132160]/10">
                     <h4 className="font-bold text-[#132160] mb-4 flex items-center gap-2">
@@ -505,13 +548,29 @@ const StaffingPage: React.FC = () => {
                     </h4>
                     <ul className="space-y-3">
                       {[
-                        { icon: <TrendingUp className="w-5 h-5 text-[#e3702e]" />, text: "Enhancing employability" },
-                        { icon: <Target className="w-5 h-5 text-[#e3702e]" />, text: "Fostering professional growth" },
-                        { icon: <GraduationCap className="w-5 h-5 text-[#e3702e]" />, text: "Comprehensive training programs" },
-                        { icon: <Users className="w-5 h-5 text-[#e3702e]" />, text: "Community development" }
+                        {
+                          icon: (
+                            <TrendingUp className="w-5 h-5 text-[#e3702e]" />
+                          ),
+                          text: "Enhancing employability",
+                        },
+                        {
+                          icon: <Target className="w-5 h-5 text-[#e3702e]" />,
+                          text: "Fostering professional growth",
+                        },
+                        {
+                          icon: (
+                            <GraduationCap className="w-5 h-5 text-[#e3702e]" />
+                          ),
+                          text: "Comprehensive training programs",
+                        },
+                        {
+                          icon: <Users className="w-5 h-5 text-[#e3702e]" />,
+                          text: "Community development",
+                        },
                       ].map((item, index) => (
-                        <motion.li 
-                          key={index} 
+                        <motion.li
+                          key={index}
                           className="flex items-start gap-3"
                           initial={{ opacity: 0, x: -20 }}
                           whileInView={{ opacity: 1, x: 0 }}
@@ -538,14 +597,17 @@ const StaffingPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <AnimateOnScroll>
               <div className="text-center mb-16">
-                <span className="text-[#e3702e] font-semibold text-sm uppercase tracking-wider bg-white/10 px-4 py-2 rounded-full">Why Choose Us</span>
+                <span className="text-[#e3702e] font-semibold text-sm uppercase tracking-wider bg-white/10 px-4 py-2 rounded-full">
+                  Why Choose Us
+                </span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-6 mb-6">
                   Why Choose Navarna Bharat?
                 </h2>
                 <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                  We combine technology, expertise, and dedication to deliver exceptional staffing solutions
+                  We combine technology, expertise, and dedication to deliver
+                  exceptional staffing solutions
                 </p>
-                <motion.div 
+                <motion.div
                   className="w-24 h-1 bg-[#e3702e] mx-auto mt-6"
                   initial={{ width: 0 }}
                   whileInView={{ width: 96 }}
@@ -555,7 +617,7 @@ const StaffingPage: React.FC = () => {
               </div>
             </AnimateOnScroll>
 
-            <motion.div 
+            <motion.div
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
               variants={staggerContainer}
               initial="hidden"
@@ -563,18 +625,35 @@ const StaffingPage: React.FC = () => {
               viewport={{ once: true }}
             >
               {[
-                { icon: <Users className="w-10 h-10" />, title: "Expert Team", description: "Skilled professionals dedicated to your success" },
-                { icon: <Target className="w-10 h-10" />, title: "Tailored Solutions", description: "Customized strategies for your unique needs" },
-                { icon: <TrendingUp className="w-10 h-10" />, title: "Fast Growth", description: "India's fastest-growing staffing platform" },
-                { icon: <Award className="w-10 h-10" />, title: "Quality Service", description: "Excellence in every engagement" }
+                {
+                  icon: <Users className="w-10 h-10" />,
+                  title: "Expert Team",
+                  description:
+                    "Skilled professionals dedicated to your success",
+                },
+                {
+                  icon: <Target className="w-10 h-10" />,
+                  title: "Tailored Solutions",
+                  description: "Customized strategies for your unique needs",
+                },
+                {
+                  icon: <TrendingUp className="w-10 h-10" />,
+                  title: "Fast Growth",
+                  description: "India's fastest-growing staffing platform",
+                },
+                {
+                  icon: <Award className="w-10 h-10" />,
+                  title: "Quality Service",
+                  description: "Excellence in every engagement",
+                },
               ].map((item, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl text-center border-2 border-white/20 hover:border-[#e3702e] transition-all"
                   variants={scaleIn}
                   whileHover={{ y: -8, scale: 1.02 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="inline-flex items-center justify-center w-16 h-16 bg-[#e3702e] rounded-xl mb-4"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
@@ -599,9 +678,10 @@ const StaffingPage: React.FC = () => {
                 Ready to Build Your Dream Team?
               </h2>
               <p className="text-xl text-gray-700 mb-10">
-                Let's discuss how our staffing solutions can transform your workforce
+                Let's discuss how our staffing solutions can transform your
+                workforce
               </p>
-              <motion.div 
+              <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                 variants={staggerContainer}
                 initial="hidden"
@@ -610,7 +690,7 @@ const StaffingPage: React.FC = () => {
               >
                 <motion.div variants={scaleIn}>
                   <Button className="bg-[#e3702e] hover:bg-[#c85e27] text-white px-10 py-7 text-lg font-semibold shadow-lg hover:shadow-xl transition-all rounded-lg group">
-                    Request a Consultation 
+                    Request a Consultation
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </motion.div>
@@ -624,7 +704,168 @@ const StaffingPage: React.FC = () => {
           </AnimateOnScroll>
         </div>
       </section>
-       
+
+      {/* Detailed Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
+                Our Core Services
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-6">
+                Comprehensive Staffing Solutions
+              </h2>
+            </div>
+
+            <div className="space-y-12">
+              {/* Recruitment */}
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Users className="w-8 h-8 text-blue-600" />
+                    <h3 className="text-3xl font-bold text-gray-900">
+                      Recruitment
+                    </h3>
+                  </div>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    At Navarna, we specialize in identifying, evaluating, and
+                    placing top talent across industries. Our recruitment
+                    process is designed to match the right people with the right
+                    roles, ensuring a perfect fit for both candidates and
+                    employers. Using advanced screening tools, behavioral
+                    assessments, and AI-powered sourcing techniques, we shorten
+                    hiring timelines while maintaining quality. Whether you're
+                    seeking entry-level professionals or executive leadership,
+                    we deliver tailored hiring solutions that drive growth.
+                  </p>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop"
+                    alt="Recruitment Services"
+                    className="rounded-2xl shadow-xl w-full h-auto"
+                  />
+                </div>
+              </div>
+
+              {/* Contract Staffing */}
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="order-2 md:order-1">
+                  <img
+                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop"
+                    alt="Contract Staffing"
+                    className="rounded-2xl shadow-xl w-full h-auto"
+                  />
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Briefcase className="w-8 h-8 text-blue-600" />
+                    <h3 className="text-3xl font-bold text-gray-900">
+                      Contract Staffing
+                    </h3>
+                  </div>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Our contract staffing solutions offer flexibility and
+                    scalability for businesses that require a dynamic workforce.
+                    We provide skilled professionals on short-term or
+                    project-based contracts, allowing you to optimize resources
+                    without long-term commitments. Navarna manages all
+                    employment formalities — from onboarding to compliance — so
+                    you can focus on your business objectives while we handle
+                    workforce administration.
+                  </p>
+                </div>
+              </div>
+
+              {/* Payroll Services */}
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <CheckCircle className="w-8 h-8 text-blue-600" />
+                    <h3 className="text-3xl font-bold text-gray-900">
+                      Payroll Services
+                    </h3>
+                  </div>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Simplify your payroll management with Navarna's end-to-end
+                    payroll solutions. We handle salary processing, tax
+                    compliance, statutory filings, reimbursements, and employee
+                    benefits with precision and confidentiality. Our
+                    technology-driven payroll systems ensure timely
+                    disbursements and error-free processing, giving you complete
+                    transparency and peace of mind.
+                  </p>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop"
+                    alt="Payroll Services"
+                    className="rounded-2xl shadow-xl w-full h-auto"
+                  />
+                </div>
+              </div>
+
+              {/* Outsourcing */}
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="order-2 md:order-1">
+                  <img
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+                    alt="HR Outsourcing"
+                    className="rounded-2xl shadow-xl w-full h-auto"
+                  />
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Target className="w-8 h-8 text-blue-600" />
+                    <h3 className="text-3xl font-bold text-gray-900">
+                      Outsourcing
+                    </h3>
+                  </div>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Focus on your core operations while we manage your HR and
+                    administrative processes. Navarna's outsourcing services
+                    cover recruitment, payroll, onboarding, compliance, and HR
+                    documentation. We help businesses reduce overhead costs,
+                    increase efficiency, and maintain compliance with local
+                    labor laws — offering reliable support for both domestic and
+                    international operations.
+                  </p>
+                </div>
+              </div>
+
+              {/* Background Verification */}
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <UserCheck className="w-8 h-8 text-blue-600" />
+                    <h3 className="text-3xl font-bold text-gray-900">
+                      Background Verification
+                    </h3>
+                  </div>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Trust and integrity are the foundation of every great hire.
+                    Our comprehensive background verification services include
+                    employment history checks, education verification, criminal
+                    record screening, and address validation. Using secure,
+                    technology-enabled processes, we help organizations ensure
+                    that every employee meets ethical and professional standards
+                    before joining the team.
+                  </p>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=400&fit=crop"
+                    alt="Background Verification"
+                    className="rounded-2xl shadow-xl w-full h-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

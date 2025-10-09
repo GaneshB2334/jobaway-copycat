@@ -1,8 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { 
-  ArrowRight, Code, Globe, ShoppingCart, Layers, 
-  Settings, Database, CheckCircle, Zap, Shield, 
-  Users, Target, Award, TrendingUp 
+import {
+  ArrowRight,
+  Code,
+  Globe,
+  ShoppingCart,
+  Layers,
+  Settings,
+  Database,
+  CheckCircle,
+  Zap,
+  Shield,
+  Users,
+  Target,
+  Award,
+  TrendingUp,
 } from "lucide-react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
@@ -13,29 +24,29 @@ import { useRef, ReactNode } from "react";
 // Animation variants
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 60 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const fadeInLeft: Variants = {
   hidden: { opacity: 0, x: -60 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut" }
-  }
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
 };
 
 const fadeInRight: Variants = {
   hidden: { opacity: 0, x: 60 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: "easeOut" }
-  }
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
 };
 
 const staggerContainer: Variants = {
@@ -44,18 +55,18 @@ const staggerContainer: Variants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.15,
-      delayChildren: 0.1
-    }
-  }
+      delayChildren: 0.1,
+    },
+  },
 };
 
 const scaleIn: Variants = {
   hidden: { opacity: 0, scale: 0.9 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" }
-  }
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 // AnimateOnScroll component
@@ -64,7 +75,10 @@ interface AnimateOnScrollProps {
   variants?: Variants;
 }
 
-const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({ children, variants = fadeInUp }) => {
+const AnimateOnScroll: React.FC<AnimateOnScrollProps> = ({
+  children,
+  variants = fadeInUp,
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -131,24 +145,22 @@ const ITESPage: React.FC = () => {
     label: string;
   }
 
-  
-
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      
+
       {/* Hero Section - Royal Staffing Inspired */}
       <section className="relative bg-white pt-32 pb-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <motion.div 
+              <motion.div
                 className="space-y-6"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <motion.div 
+                <motion.div
                   className="inline-block"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -158,7 +170,7 @@ const ITESPage: React.FC = () => {
                     IT Services & Solutions
                   </span>
                 </motion.div>
-                <motion.h1 
+                <motion.h1
                   className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -167,53 +179,52 @@ const ITESPage: React.FC = () => {
                   Information Technology and{" "}
                   <span className="text-orange-600">IT Enabled Services</span>
                 </motion.h1>
-                <motion.p 
+                <motion.p
                   className="text-xl text-gray-600 leading-relaxed"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5, duration: 0.8 }}
                 >
-                  Innovative IT solutions that transcend boundaries and redefine the online landscape for your business success.
+                  Innovative IT solutions that transcend boundaries and redefine
+                  the online landscape for your business success.
                 </motion.p>
-                <motion.div 
+                <motion.div
                   className="flex flex-wrap gap-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.7, duration: 0.8 }}
-                >
-                  
-                </motion.div>
+                ></motion.div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="relative"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <motion.div 
+                <motion.div
                   className="relative z-10"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <img 
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" 
-                    alt="IT Technology" 
+                  <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
+                    alt="IT Technology"
                     className="rounded-3xl shadow-2xl w-full"
                   />
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="absolute -bottom-6 -right-6 w-64 h-64 bg-orange-100 rounded-3xl -z-0"
-                  animate={{ 
+                  animate={{
                     scale: [1, 1.05, 1],
-                    rotate: [0, 2, 0]
+                    rotate: [0, 2, 0],
                   }}
                   transition={{ duration: 5, repeat: Infinity }}
                 />
-                <motion.div 
+                <motion.div
                   className="absolute -top-6 -left-6 w-32 h-32 bg-blue-100 rounded-full -z-0"
-                  animate={{ 
+                  animate={{
                     scale: [1, 1.1, 1],
-                    y: [0, -10, 0]
+                    y: [0, -10, 0],
                   }}
                   transition={{ duration: 4, repeat: Infinity }}
                 />
@@ -223,18 +234,143 @@ const ITESPage: React.FC = () => {
         </div>
       </section>
 
-      
+      {/* Bito Jobs Flagship Product Section */}
+      <section className="py-20 bg-gradient-to-br from-white via-yellow-50 to-yellow-100">
+        <div className="container mx-auto px-4">
+          <AnimateOnScroll>
+            <div className="max-w-4xl mx-auto text-center mb-10">
+              <motion.div
+                className="inline-block mb-4"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+              >
+                <span className="bg-yellow-200 text-yellow-700 px-4 py-2 rounded-full text-sm font-semibold">
+                  Our Flagship Product
+                </span>
+              </motion.div>
+              <motion.h2
+                className="text-4xl md:text-5xl font-bold text-gray-900 mt-2 mb-6"
+                variants={fadeInUp}
+              >
+                Bito Jobs – India's Fastest Growing Job Portal
+              </motion.h2>
+              <motion.p
+                className="text-lg text-gray-700 max-w-2xl mx-auto mb-8"
+                variants={fadeInUp}
+              >
+                Bito Jobs is our comprehensive job portal that streamlines your
+                entire IT staffing and recruitment process. From technical
+                talent acquisition to project-based contracts, we've
+                revolutionized how companies find the right IT professionals.
+              </motion.p>
+              <motion.div
+                className="w-24 h-1 bg-yellow-500 mx-auto"
+                initial={{ width: 0 }}
+                whileInView={{ width: 96 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              />
+            </div>
+          </AnimateOnScroll>
+
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+            <AnimateOnScroll variants={fadeInLeft}>
+              <motion.div
+                className="relative"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <img
+                  src="/Black White and Orange Modern Pitch Deck Presentation.png"
+                  alt="Bito Jobs Portal Screenshot"
+                  className="rounded-2xl shadow-2xl border-4 border-yellow-200 object-cover w-full"
+                />
+                <motion.div
+                  className="absolute -bottom-4 -right-4 w-full h-full bg-yellow-200 rounded-2xl -z-10"
+                  animate={{ rotate: [0, 2, 0] }}
+                  transition={{ duration: 5, repeat: Infinity }}
+                />
+              </motion.div>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll variants={fadeInRight}>
+              <div className="flex-1">
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                  Complete IT Staffing Solutions:
+                </h3>
+                <motion.div
+                  className="space-y-4 mb-8"
+                  variants={staggerContainer}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                >
+                  {[
+                    {
+                      icon: Users,
+                      label: "Technical Recruitment & IT Talent Acquisition",
+                    },
+                    {
+                      icon: Code,
+                      label: "Contract & Project-based Developers",
+                    },
+                    { icon: Database, label: "IT Payroll Management Services" },
+                    { icon: Target, label: "Technology Outsourcing Solutions" },
+                  ].map((item, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-yellow-100"
+                      variants={scaleIn}
+                      whileHover={{ scale: 1.02, x: 5 }}
+                    >
+                      <motion.div
+                        className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center"
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        <item.icon className="w-6 h-6 text-yellow-700" />
+                      </motion.div>
+                      <span className="text-gray-900 font-semibold">
+                        {item.label}
+                      </span>
+                    </motion.div>
+                  ))}
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <a
+                    href="https://bitojobs.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button className="bg-yellow-400 text-gray-900 rounded-full px-8 py-4 font-bold inline-flex items-center shadow-lg hover:bg-yellow-500 transition-all text-lg group">
+                      Explore Bito Jobs
+                      <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </a>
+                </motion.div>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </div>
+      </section>
+
       {/* Introduction Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <AnimateOnScroll>
               <div className="text-center mb-12">
-                <span className="text-orange-600 font-semibold text-sm uppercase tracking-wide">About Us</span>
+                <span className="text-orange-600 font-semibold text-sm uppercase tracking-wide">
+                  About Us
+                </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-6">
                   Welcome to Navarna Bharat
                 </h2>
-                <motion.div 
+                <motion.div
                   className="w-24 h-1 bg-orange-600 mx-auto"
                   initial={{ width: 0 }}
                   whileInView={{ width: 96 }}
@@ -243,25 +379,45 @@ const ITESPage: React.FC = () => {
                 />
               </div>
             </AnimateOnScroll>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <AnimateOnScroll variants={fadeInLeft}>
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
-                    Welcome to Navarna Bharat, where innovation meets excellence in the dynamic world of IT, web designing, and development. Situated in the vibrant hub of Noida Sector 62, Navarna Bharat is a pioneering company dedicated to crafting digital solutions that transcend boundaries and redefine the online landscape.
+                    Welcome to Navarna Bharat, where innovation meets excellence
+                    in the dynamic world of IT, web designing, and development.
+                    Situated in the vibrant hub of Noida Sector 62, Navarna
+                    Bharat is a pioneering company dedicated to crafting digital
+                    solutions that transcend boundaries and redefine the online
+                    landscape.
                   </p>
                   <p>
-                    As a frontrunner in the industry, Navarna Bharat brings a unique blend of creativity, technical expertise, and unwavering commitment to delivering top-notch services. Our team of seasoned professionals is driven by a passion for turning ideas into reality, leveraging cutting-edge technologies to build bespoke websites and robust IT solutions.
+                    As a frontrunner in the industry, Navarna Bharat brings a
+                    unique blend of creativity, technical expertise, and
+                    unwavering commitment to delivering top-notch services. Our
+                    team of seasoned professionals is driven by a passion for
+                    turning ideas into reality, leveraging cutting-edge
+                    technologies to build bespoke websites and robust IT
+                    solutions.
                   </p>
                 </div>
               </AnimateOnScroll>
               <AnimateOnScroll variants={fadeInRight}>
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
-                    At Navarna Bharat, we understand that the digital realm is constantly evolving, and we thrive on staying ahead of the curve. Whether you are seeking innovative web designs, scalable IT solutions, or seamless development, our company stands as a beacon of reliability and innovation.
+                    At Navarna Bharat, we understand that the digital realm is
+                    constantly evolving, and we thrive on staying ahead of the
+                    curve. Whether you are seeking innovative web designs,
+                    scalable IT solutions, or seamless development, our company
+                    stands as a beacon of reliability and innovation.
                   </p>
                   <p>
-                    Our commitment to excellence extends beyond technology – it encompasses a client-centric approach, fostering strong partnerships and ensuring that each project is a collaborative journey. Join us on the forefront of digital evolution as we embark on a journey to redefine the standards of IT, web designing, and development.
+                    Our commitment to excellence extends beyond technology – it
+                    encompasses a client-centric approach, fostering strong
+                    partnerships and ensuring that each project is a
+                    collaborative journey. Join us on the forefront of digital
+                    evolution as we embark on a journey to redefine the
+                    standards of IT, web designing, and development.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -276,14 +432,17 @@ const ITESPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <AnimateOnScroll>
               <div className="text-center mb-16">
-                <span className="text-orange-600 font-semibold text-sm uppercase tracking-wide">Our Expertise</span>
+                <span className="text-orange-600 font-semibold text-sm uppercase tracking-wide">
+                  Our Expertise
+                </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-6">
                   Web Design & Development
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                  "Designing solutions for the people interacting with the brand"
+                  "Designing solutions for the people interacting with the
+                  brand"
                 </p>
-                <motion.div 
+                <motion.div
                   className="w-24 h-1 bg-orange-600 mx-auto mt-6"
                   initial={{ width: 0 }}
                   whileInView={{ width: 96 }}
@@ -298,30 +457,41 @@ const ITESPage: React.FC = () => {
                 <div className="order-2 lg:order-1">
                   <div className="space-y-5 text-gray-700 leading-relaxed">
                     <p>
-                      Navarna Bharat specializes in creating customer-centric web and software solutions. Our expertise lies in seamlessly integrating the right strategy, technology, and design to deliver solutions that consistently exceed customer expectations.
+                      Navarna Bharat specializes in creating customer-centric
+                      web and software solutions. Our expertise lies in
+                      seamlessly integrating the right strategy, technology, and
+                      design to deliver solutions that consistently exceed
+                      customer expectations.
                     </p>
                     <p>
-                      In today's world, having a web presence is crucial for sustaining business momentum. A website serves as an authentic representation of your business, offering not just information but also showcasing your work style.
+                      In today's world, having a web presence is crucial for
+                      sustaining business momentum. A website serves as an
+                      authentic representation of your business, offering not
+                      just information but also showcasing your work style.
                     </p>
                     <p>
-                      Navarna Bharat, a leading web development and design company, can empower your digital presence with a fully-functional, modern website. Our websites are designed to provide you with a competitive edge in the industry.
+                      Navarna Bharat, a leading web development and design
+                      company, can empower your digital presence with a
+                      fully-functional, modern website. Our websites are
+                      designed to provide you with a competitive edge in the
+                      industry.
                     </p>
                   </div>
                 </div>
               </AnimateOnScroll>
               <AnimateOnScroll variants={fadeInRight}>
                 <div className="order-1 lg:order-2">
-                  <motion.div 
+                  <motion.div
                     className="relative"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <img 
-                      src="https://navarna.com/public/assetsfront/img/web.jpg" 
-                      alt="Web Design" 
+                    <img
+                      src="https://navarna.com/public/assetsfront/img/web.jpg"
+                      alt="Web Design"
                       className="rounded-2xl shadow-xl w-full"
                     />
-                    <motion.div 
+                    <motion.div
                       className="absolute -bottom-4 -left-4 w-full h-full bg-orange-100 rounded-2xl -z-10"
                       animate={{ rotate: [0, 2, 0] }}
                       transition={{ duration: 5, repeat: Infinity }}
@@ -332,7 +502,7 @@ const ITESPage: React.FC = () => {
             </div>
 
             {/* Corporate & Dynamic Website Cards */}
-            <motion.div 
+            <motion.div
               className="grid lg:grid-cols-2 gap-8"
               variants={staggerContainer}
               initial="hidden"
@@ -340,64 +510,91 @@ const ITESPage: React.FC = () => {
               viewport={{ once: true }}
             >
               {/* Corporate Website Card */}
-              <motion.div 
+              <motion.div
                 className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
                 variants={scaleIn}
                 whileHover={{ y: -8 }}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <motion.div 
+                  <motion.div
                     className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
                     <Globe className="w-8 h-8 text-orange-600" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-gray-900">Corporate Website</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    Corporate Website
+                  </h3>
                 </div>
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    Your brand's online appearance matters. Corporate website development is now a crucial aspect of modern business. Having a corporate website has become essential for the success of businesses, ranging from small enterprises to multinational corporations.
+                    Your brand's online appearance matters. Corporate website
+                    development is now a crucial aspect of modern business.
+                    Having a corporate website has become essential for the
+                    success of businesses, ranging from small enterprises to
+                    multinational corporations.
                   </p>
                   <p>
-                    This is where corporate website development plays a vital role in the business landscape, particularly when coupled with an effective online marketing strategy. With the right approach, your company can connect with clients worldwide at a fraction of the cost compared to traditional advertising channels.
+                    This is where corporate website development plays a vital
+                    role in the business landscape, particularly when coupled
+                    with an effective online marketing strategy. With the right
+                    approach, your company can connect with clients worldwide at
+                    a fraction of the cost compared to traditional advertising
+                    channels.
                   </p>
                   <p>
-                    As a leading corporate web designing company, Navarna Bharat specializes in enhancing the online presence of brands like yours. Our team comprises talented specialists at the forefront of corporate website development, passionate about creating business websites from scratch and optimizing them for the best results.
+                    As a leading corporate web designing company, Navarna Bharat
+                    specializes in enhancing the online presence of brands like
+                    yours. Our team comprises talented specialists at the
+                    forefront of corporate website development, passionate about
+                    creating business websites from scratch and optimizing them
+                    for the best results.
                   </p>
                 </div>
               </motion.div>
 
               {/* Dynamic Website Card */}
-              <motion.div 
+              <motion.div
                 className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
                 variants={scaleIn}
                 whileHover={{ y: -8 }}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <motion.div 
+                  <motion.div
                     className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
                     <Zap className="w-8 h-8 text-orange-600" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-gray-900">Dynamic Website</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    Dynamic Website
+                  </h3>
                 </div>
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    A dynamic website changes itself automatically based on certain criteria, user interaction, or business logic. It aims to automate your business processes, providing a live user experience by altering content in response to different situations.
+                    A dynamic website changes itself automatically based on
+                    certain criteria, user interaction, or business logic. It
+                    aims to automate your business processes, providing a live
+                    user experience by altering content in response to different
+                    situations.
                   </p>
                   <div className="bg-orange-50 p-6 rounded-xl mt-6">
                     <h4 className="text-lg font-bold text-gray-900 mb-3">
                       Custom Application Development
                     </h4>
                     <p className="text-gray-700">
-                      Our skilled in-house team uses advanced technologies to create stunning, robust, secure, and scalable custom web applications. We follow an agile development methodology for flexibility and faster delivery.
+                      Our skilled in-house team uses advanced technologies to
+                      create stunning, robust, secure, and scalable custom web
+                      applications. We follow an agile development methodology
+                      for flexibility and faster delivery.
                     </p>
                   </div>
                   <div className="mt-6">
-                    <h4 className="text-lg font-bold text-gray-900 mb-4">PHP Development:</h4>
+                    <h4 className="text-lg font-bold text-gray-900 mb-4">
+                      PHP Development:
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {technologies.map((tech, index) => (
                         <motion.span
@@ -428,15 +625,20 @@ const ITESPage: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <AnimateOnScroll variants={fadeInLeft}>
                 <div>
-                  <span className="text-orange-600 font-semibold text-sm uppercase tracking-wide">Maintenance</span>
+                  <span className="text-orange-600 font-semibold text-sm uppercase tracking-wide">
+                    Maintenance
+                  </span>
                   <h2 className="text-4xl font-bold text-gray-900 mt-3 mb-6">
                     Website Maintenance Services
                   </h2>
                   <p className="text-gray-700 leading-relaxed mb-8">
-                    Website maintenance involves updating, editing, or making changes to existing web pages to ensure your website stays current. Navarna Bharat Solutions divides web maintenance tasks into two categories:
+                    Website maintenance involves updating, editing, or making
+                    changes to existing web pages to ensure your website stays
+                    current. Navarna Bharat Solutions divides web maintenance
+                    tasks into two categories:
                   </p>
 
-                  <motion.div 
+                  <motion.div
                     className="space-y-6"
                     variants={staggerContainer}
                     initial="hidden"
@@ -444,13 +646,16 @@ const ITESPage: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     {/* AMC Card */}
-                    <motion.div 
+                    <motion.div
                       className="bg-gray-50 border border-gray-200 rounded-xl p-6"
                       variants={scaleIn}
-                      whileHover={{ scale: 1.02, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
+                      whileHover={{
+                        scale: 1.02,
+                        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+                      }}
                     >
                       <div className="flex items-center gap-3 mb-4">
-                        <motion.div 
+                        <motion.div
                           className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center"
                           whileHover={{ rotate: 360 }}
                           transition={{ duration: 0.6 }}
@@ -463,8 +668,8 @@ const ITESPage: React.FC = () => {
                       </div>
                       <ul className="space-y-3">
                         {maintenanceAMC.map((item, index) => (
-                          <motion.li 
-                            key={index} 
+                          <motion.li
+                            key={index}
                             className="flex items-start gap-3"
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -480,13 +685,16 @@ const ITESPage: React.FC = () => {
                     </motion.div>
 
                     {/* NDW Card */}
-                    <motion.div 
+                    <motion.div
                       className="bg-gray-50 border border-gray-200 rounded-xl p-6"
                       variants={scaleIn}
-                      whileHover={{ scale: 1.02, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
+                      whileHover={{
+                        scale: 1.02,
+                        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+                      }}
                     >
                       <div className="flex items-center gap-3 mb-4">
-                        <motion.div 
+                        <motion.div
                           className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center"
                           whileHover={{ rotate: 360 }}
                           transition={{ duration: 0.6 }}
@@ -498,12 +706,14 @@ const ITESPage: React.FC = () => {
                         </h3>
                       </div>
                       <p className="text-gray-700 mb-4">
-                        Add new web pages and other development updates periodically to keep the website vibrant and attract visitors:
+                        Add new web pages and other development updates
+                        periodically to keep the website vibrant and attract
+                        visitors:
                       </p>
                       <ul className="space-y-3">
                         {maintenanceNDW.map((item, index) => (
-                          <motion.li 
-                            key={index} 
+                          <motion.li
+                            key={index}
                             className="flex items-start gap-3"
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -522,19 +732,19 @@ const ITESPage: React.FC = () => {
               </AnimateOnScroll>
 
               <AnimateOnScroll variants={fadeInRight}>
-                <motion.div 
+                <motion.div
                   className="relative"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
                   <div className="relative z-10">
-                    <img 
-                      src="https://navarna.com/public/assetsfront/img/ItImg5.jpg" 
-                      alt="Website Maintenance" 
+                    <img
+                      src="https://navarna.com/public/assetsfront/img/ItImg5.jpg"
+                      alt="Website Maintenance"
                       className="rounded-2xl shadow-xl w-full"
                     />
                   </div>
-                  <motion.div 
+                  <motion.div
                     className="absolute -top-6 -right-6 w-full h-full bg-orange-100 rounded-2xl -z-0"
                     animate={{ rotate: [0, -2, 0] }}
                     transition={{ duration: 5, repeat: Infinity }}
@@ -552,11 +762,13 @@ const ITESPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <AnimateOnScroll>
               <div className="text-center mb-12">
-                <span className="text-orange-400 font-semibold text-sm uppercase tracking-wide">Development</span>
+                <span className="text-orange-400 font-semibold text-sm uppercase tracking-wide">
+                  Development
+                </span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-6">
                   Software Development
                 </h2>
-                <motion.div 
+                <motion.div
                   className="w-24 h-1 bg-orange-600 mx-auto"
                   initial={{ width: 0 }}
                   whileInView={{ width: 96 }}
@@ -565,14 +777,17 @@ const ITESPage: React.FC = () => {
                 />
               </div>
             </AnimateOnScroll>
-            
+
             <AnimateOnScroll>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed text-center max-w-4xl mx-auto">
-                Navarna Bharat, with over 5 years of IT experience, specializes in assisting Real Estate brands with big ideas. Our expertise spans the entire software development life cycle, from requirement analysis to maintenance.
+                Navarna Bharat, with over 5 years of IT experience, specializes
+                in assisting Real Estate brands with big ideas. Our expertise
+                spans the entire software development life cycle, from
+                requirement analysis to maintenance.
               </p>
             </AnimateOnScroll>
 
-            <motion.div 
+            <motion.div
               className="grid lg:grid-cols-2 gap-8"
               variants={staggerContainer}
               initial="hidden"
@@ -580,34 +795,43 @@ const ITESPage: React.FC = () => {
               viewport={{ once: true }}
             >
               {/* CRM Card */}
-              <motion.div 
+              <motion.div
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-orange-400 transition-all"
                 variants={scaleIn}
                 whileHover={{ scale: 1.02, y: -5 }}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <motion.div 
+                  <motion.div
                     className="w-14 h-14 bg-orange-600 rounded-xl flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
                     <Database className="w-7 h-7 text-white" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold">Navarna Bharat - SALES CRM</h3>
+                  <h3 className="text-2xl font-bold">
+                    Navarna Bharat - SALES CRM
+                  </h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  Wondering how to effectively handle and nurture your sales leads for positive outcomes? At Navarna Bharat, we understand the challenges of managing sales efficiency and an effective team. That's why we offer an online/offline application that works seamlessly on all platforms (mobile, iPads, tablets, PCs) anytime, anywhere. Our solution combines CRM, API, closed-loop reporting, and monitoring for improved sales results on time.
+                  Wondering how to effectively handle and nurture your sales
+                  leads for positive outcomes? At Navarna Bharat, we understand
+                  the challenges of managing sales efficiency and an effective
+                  team. That's why we offer an online/offline application that
+                  works seamlessly on all platforms (mobile, iPads, tablets,
+                  PCs) anytime, anywhere. Our solution combines CRM, API,
+                  closed-loop reporting, and monitoring for improved sales
+                  results on time.
                 </p>
               </motion.div>
 
               {/* Lead Management Card */}
-              <motion.div 
+              <motion.div
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-orange-400 transition-all"
                 variants={scaleIn}
                 whileHover={{ scale: 1.02, y: -5 }}
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <motion.div 
+                  <motion.div
                     className="w-14 h-14 bg-orange-600 rounded-xl flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
@@ -617,7 +841,13 @@ const ITESPage: React.FC = () => {
                   <h3 className="text-2xl font-bold">Lead Management System</h3>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  Companies allocate different amounts for their marketing and sales departments, ranging from 10% to 50% of their revenues. To run a successful marketing and sales campaign, it's crucial to have an organized and strategic plan. In this proposal, Navarna Bharat offers a Marketing Plan Analysis & Solutions to enhance the effectiveness and efficiency of your marketing campaign.
+                  Companies allocate different amounts for their marketing and
+                  sales departments, ranging from 10% to 50% of their revenues.
+                  To run a successful marketing and sales campaign, it's crucial
+                  to have an organized and strategic plan. In this proposal,
+                  Navarna Bharat offers a Marketing Plan Analysis & Solutions to
+                  enhance the effectiveness and efficiency of your marketing
+                  campaign.
                 </p>
               </motion.div>
             </motion.div>
@@ -631,11 +861,13 @@ const ITESPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <AnimateOnScroll>
               <div className="text-center mb-12">
-                <span className="text-orange-600 font-semibold text-sm uppercase tracking-wide">Online Business</span>
+                <span className="text-orange-600 font-semibold text-sm uppercase tracking-wide">
+                  Online Business
+                </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-6">
                   E-commerce Solutions
                 </h2>
-                <motion.div 
+                <motion.div
                   className="w-24 h-1 bg-orange-600 mx-auto mb-8"
                   initial={{ width: 0 }}
                   whileInView={{ width: 96 }}
@@ -643,7 +875,10 @@ const ITESPage: React.FC = () => {
                   transition={{ duration: 0.8 }}
                 />
                 <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
-                  E-commerce is a cost-effective way to expand your reach to new markets, diverse customers, and specific niche segments. When implemented successfully, it can lead to significant business growth, multiplying sales and revenues.
+                  E-commerce is a cost-effective way to expand your reach to new
+                  markets, diverse customers, and specific niche segments. When
+                  implemented successfully, it can lead to significant business
+                  growth, multiplying sales and revenues.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -651,12 +886,12 @@ const ITESPage: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               {/* Features Card */}
               <AnimateOnScroll variants={fadeInLeft}>
-                <motion.div 
+                <motion.div
                   className="bg-gradient-to-br from-orange-600 to-orange-500 rounded-2xl p-10 text-white shadow-xl"
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className="flex items-center gap-4 mb-8">
-                    <motion.div 
+                    <motion.div
                       className="w-16 h-16 bg-white rounded-xl flex items-center justify-center"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
@@ -665,7 +900,7 @@ const ITESPage: React.FC = () => {
                     </motion.div>
                     <h3 className="text-3xl font-bold">E-Commerce Features</h3>
                   </div>
-                  <motion.div 
+                  <motion.div
                     className="grid sm:grid-cols-2 gap-4"
                     variants={staggerContainer}
                     initial="hidden"
@@ -673,8 +908,8 @@ const ITESPage: React.FC = () => {
                     viewport={{ once: true }}
                   >
                     {ecommerceFeatures.map((feature, index) => (
-                      <motion.div 
-                        key={index} 
+                      <motion.div
+                        key={index}
                         className="flex items-center gap-3"
                         variants={fadeInUp}
                         whileHover={{ x: 5 }}
@@ -694,10 +929,18 @@ const ITESPage: React.FC = () => {
                     Why Choose Our E-Commerce Solutions?
                   </h3>
                   <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    Navarna Bharat's E-Commerce solution offers control over various operations on your website, including product management, a customized shopping cart, credit card processing, shipping module integration, and order processing.
+                    Navarna Bharat's E-Commerce solution offers control over
+                    various operations on your website, including product
+                    management, a customized shopping cart, credit card
+                    processing, shipping module integration, and order
+                    processing.
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed">
-                    At Navarna Bharat, we offer affordable and customized software services tailored to meet your specific requirements. Our designs and technology development aim to deliver impactful results, directly enhancing your bottom line.
+                    At Navarna Bharat, we offer affordable and customized
+                    software services tailored to meet your specific
+                    requirements. Our designs and technology development aim to
+                    deliver impactful results, directly enhancing your bottom
+                    line.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -710,7 +953,7 @@ const ITESPage: React.FC = () => {
       <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <motion.div 
+            <motion.div
               className="grid lg:grid-cols-2 gap-12"
               variants={staggerContainer}
               initial="hidden"
@@ -718,25 +961,30 @@ const ITESPage: React.FC = () => {
               viewport={{ once: true }}
             >
               {/* Application Development */}
-              <motion.div 
+              <motion.div
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-10 border border-white/10"
                 variants={scaleIn}
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="flex items-center gap-4 mb-8">
-                  <motion.div 
+                  <motion.div
                     className="w-16 h-16 bg-orange-600 rounded-xl flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
                     <Layers className="w-8 h-8 text-white" />
                   </motion.div>
-                  <h2 className="text-3xl font-bold">Application Development</h2>
+                  <h2 className="text-3xl font-bold">
+                    Application Development
+                  </h2>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-6">
-                  We offer solutions to support, enhance, and manage a customer's application portfolio. Our services encompass a range of development solutions in both proven and emerging technologies.
+                  We offer solutions to support, enhance, and manage a
+                  customer's application portfolio. Our services encompass a
+                  range of development solutions in both proven and emerging
+                  technologies.
                 </p>
-                <motion.div 
+                <motion.div
                   className="space-y-4"
                   variants={staggerContainer}
                   initial="hidden"
@@ -744,18 +992,23 @@ const ITESPage: React.FC = () => {
                   viewport={{ once: true }}
                 >
                   {applicationDevSegments.map((segment, index) => (
-                    <motion.div 
-                      key={index} 
+                    <motion.div
+                      key={index}
                       className="flex items-start gap-4 p-4 bg-white/5 rounded-xl"
                       variants={fadeInUp}
-                      whileHover={{ x: 5, backgroundColor: "rgba(255,255,255,0.1)" }}
+                      whileHover={{
+                        x: 5,
+                        backgroundColor: "rgba(255,255,255,0.1)",
+                      }}
                     >
-                      <motion.div 
+                      <motion.div
                         className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
                       >
-                        <span className="text-white font-bold text-sm">{index + 1}</span>
+                        <span className="text-white font-bold text-sm">
+                          {index + 1}
+                        </span>
                       </motion.div>
                       <span className="text-gray-300">{segment}</span>
                     </motion.div>
@@ -764,13 +1017,13 @@ const ITESPage: React.FC = () => {
               </motion.div>
 
               {/* Application Management */}
-              <motion.div 
+              <motion.div
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-10 border border-white/10"
                 variants={scaleIn}
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="flex items-center gap-4 mb-8">
-                  <motion.div 
+                  <motion.div
                     className="w-16 h-16 bg-orange-600 rounded-xl flex items-center justify-center"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
@@ -781,13 +1034,24 @@ const ITESPage: React.FC = () => {
                 </div>
                 <div className="space-y-5 text-gray-300 leading-relaxed">
                   <p>
-                    Companies now require their business applications to be managed around the clock, ensuring they remain secure, reliable, and maintainable. The goal is to have solutions that guarantee high availability and performance, monitoring components, and resolving production issues.
+                    Companies now require their business applications to be
+                    managed around the clock, ensuring they remain secure,
+                    reliable, and maintainable. The goal is to have solutions
+                    that guarantee high availability and performance, monitoring
+                    components, and resolving production issues.
                   </p>
                   <p>
-                    We facilitate a smooth transfer of knowledge from the existing Maintenance/Development team to our maintenance team. Our services cover preventive, adaptive, and corrective maintenance.
+                    We facilitate a smooth transfer of knowledge from the
+                    existing Maintenance/Development team to our maintenance
+                    team. Our services cover preventive, adaptive, and
+                    corrective maintenance.
                   </p>
                   <p>
-                    Our services include fixing bugs, identifying and correcting latent errors, assessing the impact of new releases, suggesting improvements, maintaining technical and user documentation, monitoring applications for data integrity and performance, and operating a 24x7 Helpdesk.
+                    Our services include fixing bugs, identifying and correcting
+                    latent errors, assessing the impact of new releases,
+                    suggesting improvements, maintaining technical and user
+                    documentation, monitoring applications for data integrity
+                    and performance, and operating a 24x7 Helpdesk.
                   </p>
                 </div>
               </motion.div>
@@ -802,11 +1066,13 @@ const ITESPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <AnimateOnScroll>
               <div className="text-center mb-12">
-                <span className="text-orange-600 font-semibold text-sm uppercase tracking-wide">Our Services</span>
+                <span className="text-orange-600 font-semibold text-sm uppercase tracking-wide">
+                  Our Services
+                </span>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3 mb-6">
                   Information Technology and IT Enabled Services
                 </h2>
-                <motion.div 
+                <motion.div
                   className="w-24 h-1 bg-orange-600 mx-auto mb-8"
                   initial={{ width: 0 }}
                   whileInView={{ width: 96 }}
@@ -815,17 +1081,27 @@ const ITESPage: React.FC = () => {
                 />
                 <div className="max-w-4xl mx-auto space-y-5 text-lg text-gray-700 leading-relaxed">
                   <p>
-                    In the Information Technology and IT Enabled Services (ITES) domain, Navarna is a leading player offering cutting-edge solutions to meet the diverse and evolving needs of businesses. Our IT-ITES business line is characterized by a commitment to innovation, technological expertise, and a client-centric approach.
+                    In the Information Technology and IT Enabled Services (ITES)
+                    domain, Navarna is a leading player offering cutting-edge
+                    solutions to meet the diverse and evolving needs of
+                    businesses. Our IT-ITES business line is characterized by a
+                    commitment to innovation, technological expertise, and a
+                    client-centric approach.
                   </p>
                   <p>
-                    In the ever-evolving landscape of modern technologies, NAVARNA emerges as a pioneering force committed to delivering cutting-edge IT solutions that propel businesses into the future. Rooted in a steadfast commitment to innovation, our company stands at the forefront of transformative technologies.
+                    In the ever-evolving landscape of modern technologies,
+                    NAVARNA emerges as a pioneering force committed to
+                    delivering cutting-edge IT solutions that propel businesses
+                    into the future. Rooted in a steadfast commitment to
+                    innovation, our company stands at the forefront of
+                    transformative technologies.
                   </p>
                 </div>
               </div>
             </AnimateOnScroll>
 
             {/* Service Cards Grid */}
-            <motion.div 
+            <motion.div
               className="grid md:grid-cols-3 gap-8 mb-12"
               variants={staggerContainer}
               initial="hidden"
@@ -837,20 +1113,23 @@ const ITESPage: React.FC = () => {
                   image: "https://navarna.com/public/img/solution.jpg",
                   badge: "Solutions",
                   title: "Innovative IT Solutions",
-                  description: "At Navarna, we pride ourselves on being at the forefront of technological innovation. Our IT solutions are designed to address the challenges and opportunities presented by the ever-changing landscape of the digital world. From software development and application design to cloud computing and cybersecurity."
+                  description:
+                    "At Navarna, we pride ourselves on being at the forefront of technological innovation. Our IT solutions are designed to address the challenges and opportunities presented by the ever-changing landscape of the digital world. From software development and application design to cloud computing and cybersecurity.",
                 },
                 {
                   image: "https://navarna.com/public/img/solution1.jpg",
                   badge: "Services",
                   title: "Tailored IT Services",
-                  description: "We understand that each business is unique, and one-size-fits-all solutions do not always suffice. Our approach involves understanding the specific needs and goals of our clients, allowing us to tailor our IT services accordingly. Whether you are a startup looking for scalable solutions or an established enterprise seeking digital transformation."
+                  description:
+                    "We understand that each business is unique, and one-size-fits-all solutions do not always suffice. Our approach involves understanding the specific needs and goals of our clients, allowing us to tailor our IT services accordingly. Whether you are a startup looking for scalable solutions or an established enterprise seeking digital transformation.",
                 },
                 {
                   image: "https://navarna.com/public/img/solution2.jpeg",
                   badge: "Infrastructure",
                   title: "Robust IT Infrastructure",
-                  description: "Navarna is dedicated to building and maintaining robust IT infrastructure for businesses. This includes network architecture, data storage, and server management, ensuring a secure and efficient foundation for your digital operations. Our team of IT experts collaborates with clients to create scalable and future-ready infrastructure."
-                }
+                  description:
+                    "Navarna is dedicated to building and maintaining robust IT infrastructure for businesses. This includes network architecture, data storage, and server management, ensuring a secure and efficient foundation for your digital operations. Our team of IT experts collaborates with clients to create scalable and future-ready infrastructure.",
+                },
               ].map((service, index) => (
                 <motion.div
                   key={index}
@@ -859,7 +1138,7 @@ const ITESPage: React.FC = () => {
                   whileHover={{ y: -8 }}
                 >
                   <div className="relative h-64 overflow-hidden">
-                    <motion.img 
+                    <motion.img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover"
@@ -867,7 +1146,7 @@ const ITESPage: React.FC = () => {
                       transition={{ duration: 0.5 }}
                     />
                     <div className="absolute top-4 left-4">
-                      <motion.span 
+                      <motion.span
                         className="bg-orange-600 text-white px-5 py-2 rounded-full font-semibold text-sm shadow-lg"
                         whileHover={{ scale: 1.1 }}
                       >
@@ -888,7 +1167,7 @@ const ITESPage: React.FC = () => {
             </motion.div>
 
             {/* Security and BPO Cards */}
-            <motion.div 
+            <motion.div
               className="grid lg:grid-cols-2 gap-8"
               variants={staggerContainer}
               initial="hidden"
@@ -900,14 +1179,16 @@ const ITESPage: React.FC = () => {
                   image: "https://navarna.com/public/img/solution3.jpg",
                   badge: "Security",
                   title: "Data Security and Compliance",
-                  description: "In an era where data is a critical asset, Navarna places a strong emphasis on data security and compliance. We implement robust cybersecurity measures to safeguard sensitive information and ensure compliance with industry regulations. Our focus on data integrity and privacy gives our clients the confidence that their digital assets are in safe hands."
+                  description:
+                    "In an era where data is a critical asset, Navarna places a strong emphasis on data security and compliance. We implement robust cybersecurity measures to safeguard sensitive information and ensure compliance with industry regulations. Our focus on data integrity and privacy gives our clients the confidence that their digital assets are in safe hands.",
                 },
                 {
                   image: "https://navarna.com/public/img/solution4.jpg",
                   badge: "BPO",
                   title: "ITES - Business Process Outsourcing (BPO)",
-                  description: "Navarna's ITES offerings extend to Business Process Outsourcing (BPO) services. From customer support and data entry to back-office processes, our BPO services are designed to streamline operations, reduce costs, and enhance overall efficiency. We leverage technology to automate repetitive tasks, allowing businesses to focus on their core competencies."
-                }
+                  description:
+                    "Navarna's ITES offerings extend to Business Process Outsourcing (BPO) services. From customer support and data entry to back-office processes, our BPO services are designed to streamline operations, reduce costs, and enhance overall efficiency. We leverage technology to automate repetitive tasks, allowing businesses to focus on their core competencies.",
+                },
               ].map((service, index) => (
                 <motion.div
                   key={index}
@@ -916,7 +1197,7 @@ const ITESPage: React.FC = () => {
                   whileHover={{ y: -8 }}
                 >
                   <div className="relative h-64 overflow-hidden">
-                    <motion.img 
+                    <motion.img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover"
@@ -924,7 +1205,7 @@ const ITESPage: React.FC = () => {
                       transition={{ duration: 0.5 }}
                     />
                     <div className="absolute top-4 left-4">
-                      <motion.span 
+                      <motion.span
                         className="bg-orange-600 text-white px-5 py-2 rounded-full font-semibold text-sm shadow-lg"
                         whileHover={{ scale: 1.1 }}
                       >
