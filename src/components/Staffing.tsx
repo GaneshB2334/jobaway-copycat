@@ -94,18 +94,18 @@ const StaffingPage: React.FC = () => {
     "Campus Hiring",
     "Payroll Services",
     "Manpower Statuary & Compliance Services",
-    "Offshoring Solutions and consultancy"
+    "Offshoring Solutions and consultancy",
   ];
 
   const apprenticeshipServices: string[] = [
     "National Apprenticeship Promotion Scheme (NAPS)",
     "National Apprenticeship Training Scheme (NATS)",
-    "Bachelor of Vocation Education (B. VoC)"
+    "Bachelor of Vocation Education (B. VoC)",
   ];
 
   const features: string[] = [
     "Simple, visual dashboard with on-point reports",
-    "Build custom reports that make sense for your business"
+    "Build custom reports that make sense for your business",
   ];
 
   interface Stat {

@@ -87,7 +87,7 @@ const ITESPage: React.FC = () => {
     "Symfony",
     "PHP",
     "Angular",
-    "ASP.NET"
+    "ASP.NET",
   ];
 
   const maintenanceAMC: string[] = [
@@ -96,7 +96,7 @@ const ITESPage: React.FC = () => {
     "Update announcements, articles, news, etc.",
     "Manipulate and add images (client-supplied images like on-site progress pictures & videos)",
     "Technical troubleshooting and support",
-    "Website review and performance optimization"
+    "Website review and performance optimization",
   ];
 
   const maintenanceNDW: string[] = [
@@ -105,7 +105,7 @@ const ITESPage: React.FC = () => {
     "Design and develop Electronic Direct Mailers (EDMs)",
     "Design and develop online query forms or surveys",
     "Design or update virtual tours (via Flash/JavaScript)",
-    "Design or update interactive master plans"
+    "Design or update interactive master plans",
   ];
 
   const ecommerceFeatures: string[] = [
@@ -116,14 +116,14 @@ const ITESPage: React.FC = () => {
     "Payment gateway",
     "Sales reports",
     "SEO friendly design",
-    "Additional customizable features"
+    "Additional customizable features",
   ];
 
   const applicationDevSegments: string[] = [
     "Development of web and portal applications for both mobile and computers",
     "Development of middleware applications to ensure end-to-end application and data integration",
     "Development of composite applications to prepare current applications for the future",
-    "Development of mobile applications, including design, support & maintenance, and verification"
+    "Development of mobile applications, including design, support & maintenance, and verification",
   ];
 
   interface Stat {
@@ -946,7 +946,7 @@ const ITESPage: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );

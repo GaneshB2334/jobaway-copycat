@@ -4,6 +4,7 @@ import ClientsSlider from "@/components/ClientsSlider";
 import About from "@/components/About";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Categories from "@/components/Categories";
+import BitoJobs from "@/components/BitoJobs";
 import Industries from "@/components/Industries";
 import HowItWorks from "@/components/HowItWorks";
 import Team from "@/components/Team";
@@ -20,6 +21,7 @@ const Index = () => {
       <About />
       <WhyChooseUs />
       <Categories />
+      <BitoJobs />
       <Industries />
       <HowItWorks />
       <Team />

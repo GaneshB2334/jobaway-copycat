@@ -81,41 +81,44 @@ const About = () => {
     {
       icon: <Target className="w-8 h-8" />,
       title: "Innovation",
-      description: "Continuously pushing boundaries to deliver cutting-edge solutions"
+      description:
+        "Continuously pushing boundaries to deliver cutting-edge solutions",
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Excellence",
-      description: "Committed to delivering quality that exceeds expectations"
+      description: "Committed to delivering quality that exceeds expectations",
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Client Satisfaction",
-      description: "Your success is our priority, every step of the way"
+      description: "Your success is our priority, every step of the way",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Reliability",
-      description: "A trusted partner you can count on for consistent results"
-    }
+      description: "A trusted partner you can count on for consistent results",
+    },
   ];
 
   const services = [
     {
       icon: <Globe className="w-6 h-6" />,
       title: "FMCG Solutions",
-      description: "Swift market presence and distribution excellence for your products"
+      description:
+        "Swift market presence and distribution excellence for your products",
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "IT Services",
-      description: "Tailored technology solutions matching your unique business demands"
+      description:
+        "Tailored technology solutions matching your unique business demands",
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Staffing Solutions",
-      description: "Strategic talent alignment with your organizational goals"
-    }
+      description: "Strategic talent alignment with your organizational goals",
+    },
   ];
 
   const features = [
@@ -124,7 +127,7 @@ const About = () => {
     "Navigate through tonnes of data with custom analytics",
     "Seamless integration with existing systems",
     "Real-time data insights and analytics",
-    "Dedicated support team available 24/7"
+    "Dedicated support team available 24/7",
   ];
 
   return (
