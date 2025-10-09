@@ -131,12 +131,7 @@ const ITESPage: React.FC = () => {
     label: string;
   }
 
-  const stats: Stat[] = [
-    { number: "5+", label: "Years Experience" },
-    { number: "100+", label: "Projects Completed" },
-    { number: "95%", label: "Client Satisfaction" },
-    { number: "24/7", label: "Support Available" }
-  ];
+  
 
   return (
     <div className="min-h-screen bg-white">
@@ -228,43 +223,7 @@ const ITESPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-600 to-orange-500">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div 
-              className="grid grid-cols-2 lg:grid-cols-4 gap-8"
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {stats.map((stat, index) => (
-                <motion.div 
-                  key={index} 
-                  className="text-center"
-                  variants={scaleIn}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <motion.div 
-                    className="text-4xl lg:text-5xl font-bold text-white mb-2"
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                  >
-                    {stat.number}
-                  </motion.div>
-                  <div className="text-orange-100 text-lg">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
+      
       {/* Introduction Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
