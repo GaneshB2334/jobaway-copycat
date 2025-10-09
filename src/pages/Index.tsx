@@ -19,7 +19,6 @@ const Index = () => {
       <Hero />
       <ClientsSlider />
       <About />
-      <BitoJobs />
 
       <WhyChooseUs />
       <Categories />
