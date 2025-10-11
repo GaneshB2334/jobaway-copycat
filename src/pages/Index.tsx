@@ -30,7 +30,7 @@ const Index = () => {
       <HowItWorks />
       <Team />
       <News />
-      <Newsletter />
+      {/*<Newsletter />*/}
       <Footer />
 
       {/* Floating CTA for Bito Jobs */}
