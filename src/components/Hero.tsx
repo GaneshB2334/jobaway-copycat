@@ -9,6 +9,8 @@ import {
   TrendingUp,
   Award,
   Globe,
+  ExternalLink,
+  X,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -51,6 +53,7 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeService, setActiveService] = useState<number | null>(null);
   const [showVideo, setShowVideo] = useState(false);
+  const [showBitoHighlight, setShowBitoHighlight] = useState(true);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -148,13 +151,62 @@ const Hero = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-8">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 text-indigo-700 px-6 py-3 rounded-full border border-indigo-200 shadow-lg">
+              {/* Badge with Bito Jobs Highlight */}
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 text-indigo-700 px-6 py-3 rounded-full border border-indigo-200 shadow-lg mb-4">
                 <Star className="w-4 h-4 text-yellow-500 fill-current" />
                 <span className="font-semibold text-sm uppercase tracking-wider">
                   Excellence in Business Solutions
                 </span>
               </div>
+
+              {/* Bito Jobs Highlight */}
+              {/*{showBitoHighlight && (
+                <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 text-white rounded-2xl p-6 shadow-2xl border border-indigo-200 max-w-2xl mx-auto mb-6 relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 animate-pulse" />
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-yellow-400 rounded-xl flex items-center justify-center">
+                          <Star className="w-6 h-6 text-yellow-900" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-lg">
+                            Bito Jobs - Our Prime Product
+                          </h3>
+                          <p className="text-blue-100 text-sm">
+                            India's #1 Job Portal
+                          </p>
+                        </div>
+                      </div>
+                      <button
+                        onClick={() => setShowBitoHighlight(false)}
+                        className="text-white/60 hover:text-white transition-colors"
+                      >
+                        <X className="w-5 h-5" />
+                      </button>
+                    </div>
+                    <div className="grid grid-cols-3 gap-4 text-center mb-4">
+                      <div>
+                        <p className="text-2xl font-bold">50k+</p>
+                        <p className="text-xs text-blue-200">Users</p>
+                      </div>
+                      <div>
+                        <p className="text-2xl font-bold">4.8★</p>
+                        <p className="text-xs text-blue-200">Rating</p>
+                      </div>
+                      <div>
+                        <p className="text-2xl font-bold">95%</p>
+                        <p className="text-xs text-blue-200">Success</p>
+                      </div>
+                    </div>
+                    <button className="w-full bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-xl py-3 px-4 font-semibold transition-all duration-200 flex items-center justify-center gap-2">
+                      <ExternalLink className="w-5 h-5" />
+                      Launch Bito Jobs Now
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              )}*/}
 
               {/* Main Heading */}
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
@@ -189,46 +241,42 @@ const Hero = () => {
                 ))}
               </div>
 
-              {/* CTA Buttons */}
+              {/* CTA Buttons with Bito Jobs Primary */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 inline-flex items-center justify-center group">
-                  Explore Our Services
+                <button className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold rounded-full px-12 py-5 inline-flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group text-lg">
+                  <Star className="mr-2 w-5 h-5" />
+                  Try Bito Jobs Free
                   <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <button className="bg-white hover:bg-gray-50 border-2 border-gray-200 hover:border-indigo-300 text-gray-700 hover:text-indigo-600 px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
-                  Contact Us Today
+                <button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-full px-10 py-4 inline-flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group text-lg">
+                  Explore Services
+                  <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
 
-              {/* Trust Indicators */}
-              <div className="flex items-center gap-8 pt-4">
-                <div className="flex items-center gap-2">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div
-                        key={i}
-                        className="w-8 h-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full border-2 border-white flex items-center justify-center"
-                      >
-                        <Users className="w-4 h-4 text-white" />
-                      </div>
-                    ))}
+              {/* Trust Indicators with Bito Jobs Focus */}
+              {/*<div className="flex items-center justify-center sm:justify-start gap-8 pt-4">
+                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-full px-4 py-2 border border-indigo-200">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
+                      <CheckCircle className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="text-sm text-indigo-700 font-semibold">
+                      Bito Jobs: 4.8★ Rating
+                    </span>
                   </div>
-                  <span className="text-sm text-gray-600 font-medium">
-                    Trusted by 500+ companies
-                  </span>
                 </div>
-                <div className="flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 text-yellow-400 fill-current"
-                    />
-                  ))}
-                  <span className="text-sm text-gray-600 ml-2">
-                    4.9/5 Rating
-                  </span>
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-full px-4 py-2 border border-green-200">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
+                      <Users className="w-4 h-4 text-white" />
+                    </div>
+                    <span className="text-sm text-green-700 font-semibold">
+                      50k+ Active Users
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </div>*/}
             </div>
 
             {/* Right Content - Hero Visual */}
